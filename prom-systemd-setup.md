@@ -159,3 +159,6 @@ sudo systemctl enable prometheus
 # 5. Prometheus web interface
 
 `http://localhost:9090`
+
+# 6. References
+[Configure a Prometeus Monitoring Server with a Grafana Dashboard](https://www.scaleway.com/en/docs/configure-prometheus-monitoring-with-grafana)
