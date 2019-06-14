@@ -62,4 +62,7 @@ sudo grafana-cli plugins install grafana-piechart-panel
 
 # Restart grafana service
 sudo service grafana-server restart
+
+# Check grafana service status
+sudo service grafana-server status
 ```

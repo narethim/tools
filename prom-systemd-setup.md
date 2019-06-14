@@ -1,5 +1,6 @@
-# 1. Setup Prometheus
+# Setup Prometheus
 
+Install Prometheus Node_Exporter v0.18.1 and Prometheus Server v2.10.0 on an x86_64 machine or VM.
 
 # 2. Prepare the environment
 
@@ -81,6 +82,12 @@ sudo systemctl status node_exporter
 sudo systemctl enable node_exporter
 ```
 
+7. Verify that it works fine.
+
+```sh
+curl http://localhost:9100/
+```
+
 # 4. Setup Prometheus server
 
 1. Download the latest version of Prometheus
@@ -95,18 +102,30 @@ sudo cp prometheus-2.10.0.linux-amd64/promtool /usr/local/bin
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
 
-sudo cp -r prometheus-2.10.0.linux-amd64/prometheus/consoles /etc/prometheus
-sudo cp -r prometheus-2.10.0.linux-amd64/prometheus/console_libraries /etc/prometheus
+sudo cp  prometheus-2.10.0.linux-amd64/prometheus.yml /etc/prometheus
+sudo cp -r prometheus-2.10.0.linux-amd64/consoles /etc/prometheus
+sudo cp -r prometheus-2.10.0.linux-amd64/console_libraries /etc/prometheus
 
+sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
 sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 ```
 
 2. Configure Prometheus
 
-`vi prometheus.yml`
+`sudo vi /etc/prometheus/prometheus.yml`
 
-`vi prometheus.service`
+Append the following into it.
+
+```sh
+  - job_name: 'nodes'
+    static_configs:
+    - targets: ['localhost:9100', '192.168.0.126:9100']
+```
+
+`sudo vi /etc/systemd/system/prometheus.service`
+
+Copy the following into it.
 
 ```sh
 [unit]
@@ -123,14 +142,10 @@ ExecStart=/usr/local/bin/prometheus \
 --storage.tsdb.path /var/lib/prometheus \
 --web.console.templates=/etc/prometheus/consoles \
 --web.console.libraries=/etc/prometheus/console_libraries
-ExecReload=/bin/kill -HUP $MAINPID 
+ExecReload=/bin/kill -HUP $MAINPID
 
 [Install]
 WantedBy=multi-user.target
-```
-
-```sh
-sudo cp prometheus.service /etc/systemd/system
 ```
 
 3. Reload 'systemd' to use the newly defined service.
@@ -156,6 +171,7 @@ sudo systemctl status prometheus
 ```sh
 sudo systemctl enable prometheus
 ```
+
 # 5. Prometheus web interface
 
 `http://localhost:9090`
