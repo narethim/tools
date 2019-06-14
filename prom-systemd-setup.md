@@ -34,7 +34,9 @@ sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 rm -fr node_exporter-0.18.1.linux-amd64.tar.gz node_exporter-0.18.1.linux-amd64
 ```
 
-2. Run Node Exporter automatically on each boot
+## Configure
+
+Configure it to run `Node Exporter` automatically on each boot
 
 ```sh
 sudo vi /etc/systemd/system/node_exporter.service
@@ -58,7 +60,7 @@ ExecStart=/usr/local/bin/node_exporter
 WantedBy=multi-user.target
 ```
 
-3. Reload `systemd` to use the newly defined service. Start `node_exporter` service. Check `node_exporter` service status.
+Reload `systemd` to use the newly defined service. Start `node_exporter` service. Check `node_exporter` service status.
 
 ```sh
 sudo systemctl daemon-reload
@@ -66,15 +68,16 @@ sudo systemctl start node_exporter
 sudo systemctl status node_exporter
 ```
 
-4. If everything is working enable `Node Exporter` to be started on each boot.
+If everything is working enable `Node Exporter` to be started on each boot.
 
 ```sh
 sudo systemctl enable node_exporter
 ```
 
-5. Verify that it works fine.
+Verify that it works correctly.
 
 [http://localhost:9100](http://localhost:9100)
+
 [http://localhost:9100/metrics](http://localhost:9100/metrics)
 
 # 3. Setup Prometheus server
@@ -137,25 +140,15 @@ ExecReload=/bin/kill -HUP $MAINPID
 WantedBy=multi-user.target
 ```
 
-3. Reload 'systemd' to use the newly defined service.
+3. Reload `systemd` to use the newly defined service. Start prometheus service. Get prometheus service status.
 
 ```sh
 sudo systemctl daemon-reload
-```
-
-4. Start prometheus service.
-
-```sh
 sudo systemctl start prometheus
-```
-
-5. Get prometheus service status.
-
-```sh
 sudo systemctl status prometheus
 ```
 
-6. If everything is working enable `Node Exporter` to be started on each boot.
+If everything is working enable `Node Exporter` to be started on each boot.
 
 ```sh
 sudo systemctl enable prometheus

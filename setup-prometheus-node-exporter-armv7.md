@@ -1,6 +1,6 @@
 # Setup Prometheus
 
-Install Prometheus Node_Exporter v0.18.1 on an arm64 machine such as NVIDIA Jetson TX2, Nano.
+Install Prometheus Node_Exporter v0.18.1 on an armv7 machine such as Rapberry Pi 3 Version B/B+.
 
 # 1. Prepare the environment
 
@@ -16,15 +16,15 @@ sudo useradd --no-create-home --shell /bin/false node_exporter
 
 ## Install
 
-1. Download the latest version of `Node Exporter`
+Download the latest version of `Node Exporter`
 
 ```sh
-wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-arm64.tar.gz
-tar zxvf node_exporter-0.18.1.linux-arm64.tar.gz
-sudo cp node_exporter-0.18.1.linux-arm64/node_exporter /usr/local/bin
+wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv7.tar.gz
+tar zxvf node_exporter-0.18.1.linux-armv7.tar.gz
+sudo cp node_exporter-0.18.1.linux-armv7/node_exporter /usr/local/bin
 sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
-rm -fr node_exporter-0.18.1.linux-arm64.tar.gz node_exporter-0.18.1.linux-arm64
+rm -fr node_exporter-0.18.1.linux-armv7.tar.gz node_exporter-0.18.1.linux-armv7
 ```
 
 ## Configure
@@ -72,5 +72,3 @@ Verify that it works correctly.
 [http://localhost:9100](http://localhost:9100)
 
 [http://localhost:9100/metrics](http://localhost:9100/metrics)
-
-
