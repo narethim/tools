@@ -20,6 +20,12 @@ Frequently used tools
 
 ### 3.1 Installation
 
+* Install `Prometheus` and `Node Exporter` on x86_64 host [here](prom-systemd-setup.md)
+* Install `Prometheus` and `Node Exporter` on arm64 host [here](prom-systemd-setup-arm64.md)
+
+* Install `Node Exporter` on a arm64 (NVIDIA Jetson TX2, Nano) [here](setup-prometheus-node-exporter-arm64.md)
+* Install `Node Exporter` on a armv7 (Rpi 3 B/B+) [here](setup-prometheus-node-exporter-armv7.md)
+
 Follow this instruction:
 [FIRST STEPS WITH PROMETHEUS](https://prometheus.io/docs/introduction/first_steps/)
 
@@ -47,7 +53,7 @@ sudo service grafana-server start
 
 ### 4.2 Import dashbords
 
-Import the following deshboards:
+Import the following dashboards:
 
 - 1860
 - 405
@@ -66,3 +72,6 @@ sudo service grafana-server restart
 # Check grafana service status
 sudo service grafana-server status
 ```
+### 4.2 Web Interface
+
+[http:localhost:3000](http:localhost:3000)
