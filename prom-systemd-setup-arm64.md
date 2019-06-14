@@ -24,7 +24,7 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 
 ## Install
 
-1. Download the latest version of `Node Exporter`
+Download the latest version of `Node Exporter`
 
 ```sh
 wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-arm64.tar.gz

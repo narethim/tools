@@ -17,6 +17,7 @@ sudo chown prometheus:prometheus /etc/prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus
 
 ```
+
 # 2. Setup Node Exporter
 
 `Node Exporter` is installed on every node that is to be monitored.
