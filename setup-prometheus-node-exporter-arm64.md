@@ -16,7 +16,7 @@ sudo useradd --no-create-home --shell /bin/false node_exporter
 
 ## Install
 
-1. Download the latest version of `Node Exporter`
+Download the latest version of `Node Exporter`
 
 ```sh
 wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-arm64.tar.gz
@@ -72,5 +72,3 @@ Verify that it works correctly.
 [http://localhost:9100](http://localhost:9100)
 
 [http://localhost:9100/metrics](http://localhost:9100/metrics)
-
-

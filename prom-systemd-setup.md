@@ -4,7 +4,7 @@ Install Prometheus Node_Exporter v0.18.1 and Prometheus Server v2.10.0 on an x86
 
 # 1. Prepare the environment
 
-## Create 2 users: prometheus and node_exporter
+Create 2 users: prometheus and node_exporter
 
 ```sh
 sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
@@ -19,11 +19,11 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 ```
 # 2. Setup Node Exporter
 
-Node Exporter is installed on every node that is to be monitored.
+`Node Exporter` is installed on every node that is to be monitored.
 
 ## Install
 
-1. Download the latest version of Node Exporter
+1. Download the latest version of `Node Exporter`
 
 ```sh
 wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
@@ -82,7 +82,9 @@ Verify that it works correctly.
 
 # 3. Setup Prometheus server
 
-1. Download the latest version of Prometheus
+## Install
+
+Download the latest version of Prometheus
 
 ```sh
 wget https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.linux-amd64.tar.gz
@@ -103,7 +105,7 @@ sudo chown -R prometheus:prometheus /etc/prometheus/consoles
 sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 ```
 
-2. Configure Prometheus
+## Configure Prometheus
 
 `sudo vi /etc/prometheus/prometheus.yml`
 
@@ -114,6 +116,8 @@ Append the following into it.
     static_configs:
     - targets: ['localhost:9100', '192.168.0.126:9100']
 ```
+
+Configure it to run `prometheus` automatically on each boot
 
 `sudo vi /etc/systemd/system/prometheus.service`
 
@@ -140,7 +144,7 @@ ExecReload=/bin/kill -HUP $MAINPID
 WantedBy=multi-user.target
 ```
 
-3. Reload `systemd` to use the newly defined service. Start prometheus service. Get prometheus service status.
+Reload `systemd` to use the newly defined service. Start prometheus service. Get prometheus service status.
 
 ```sh
 sudo systemctl daemon-reload
