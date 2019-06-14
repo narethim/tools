@@ -2,7 +2,7 @@
 
 Install Prometheus Node_Exporter v0.18.1 and Prometheus Server v2.10.0 on an x86_64 machine or VM.
 
-# 2. Prepare the environment
+# 1. Prepare the environment
 
 ## Create 2 users: prometheus and node_exporter
 
@@ -17,7 +17,7 @@ sudo chown prometheus:prometheus /etc/prometheus
 sudo chown prometheus:prometheus /var/lib/prometheus
 
 ```
-# 3. Setup Node Exporter
+# 2. Setup Node Exporter
 
 Node Exporter is installed on every node that is to be monitored.
 
@@ -58,37 +58,26 @@ ExecStart=/usr/local/bin/node_exporter
 WantedBy=multi-user.target
 ```
 
-3. Reload 'systemd' to use the newly defined service.
+3. Reload `systemd` to use the newly defined service. Start `node_exporter` service. Check `node_exporter` service status.
 
 ```sh
 sudo systemctl daemon-reload
-```
-
-4. Start node_exporter service.
-
-```sh
 sudo systemctl start node_exporter
-```
-
-5. Get node_exporter service status.
-
-```sh
 sudo systemctl status node_exporter
 ```
 
-6. If everything is working enable Node Exporter to be started on each boot.
+4. If everything is working enable `Node Exporter` to be started on each boot.
 
 ```sh
 sudo systemctl enable node_exporter
 ```
 
-7. Verify that it works fine.
+5. Verify that it works fine.
 
-```sh
-curl http://localhost:9100/
-```
+[http://localhost:9100](http://localhost:9100)
+[http://localhost:9100/metrics](http://localhost:9100/metrics)
 
-# 4. Setup Prometheus server
+# 3. Setup Prometheus server
 
 1. Download the latest version of Prometheus
 
@@ -166,15 +155,17 @@ sudo systemctl start prometheus
 sudo systemctl status prometheus
 ```
 
-6. If everything is working enable Node Exporter to be started on each boot.
+6. If everything is working enable `Node Exporter` to be started on each boot.
 
 ```sh
 sudo systemctl enable prometheus
 ```
 
-# 5. Prometheus web interface
+# 4. Prometheus web interface
 
-`http://localhost:9090`
+[http://localhost:9090](http://localhost:9090)
 
-# 6. References
+[http://localhost:9090/targets](http://localhost:9090/targets)
+
+# 5. References
 [Configure a Prometeus Monitoring Server with a Grafana Dashboard](https://www.scaleway.com/en/docs/configure-prometheus-monitoring-with-grafana)
