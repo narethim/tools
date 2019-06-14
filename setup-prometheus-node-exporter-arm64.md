@@ -68,6 +68,7 @@ sudo systemctl enable node_exporter
 5. Verify that it works fine.
 
 [http://localhost:9100](http://localhost:9100)
+
 [http://localhost:9100/metrics](http://localhost:9100/metrics)
 
 
