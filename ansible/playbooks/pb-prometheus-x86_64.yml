@@ -1,0 +1,68 @@
+---
+- hosts: example
+  remote_user: ubuntu
+  become: yes
+ 
+  tasks:
+
+  # Create tmp
+  - name: Create tmp dir at /home/ubuntu/projects/tools/ansible/tmp
+    file:
+      state: present
+      path: /home/ubuntu/projects/tools/ansible/tmp
+
+  # Download file (similar to wget)
+  - name: Download prometheus-2.10.0.linux-amd64.tar.gz
+    get_url:
+      url: https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.linux-amd64.tar.gz
+      dest: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64.tar.gz
+
+  # Unarchive file
+  - name: Unarchive file prometheus-2.10.0.linux-amd64.tar.gz
+    unarchive:
+      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64.tar.gz
+      dest: /home/ubuntu/projects/tools/ansible/tmp/
+
+  # Copy file prom* to /usr/local/bin/prom*
+  - name: Copy file with owner and permissions
+    copy:
+      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64/prom*
+      dest: /usr/local/bin/prom*
+      owner: prometheus
+      group: prometheus
+      mode: u=rwx,g=rx,o=rx
+
+  # Copy file consoles* to /etc/prometheus/prom*
+  - name: Copy file with owner and permissions
+    copy:
+      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64/consoles*
+      dest: /etc/prometheus/consoles*
+      owner: prometheus
+      group: prometheus
+
+  # Copy file prometheus.yml to /etc/prometheus/prometheus.yml
+  - name: Copy file with owner and permissions
+    copy:
+      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64/prometheus.yml
+      dest: /etc/prometheus/prometheus.yml
+      owner: prometheus
+      group: prometheus
+
+  # Clean up tmp dir
+  - name: Delete dir /home/ubuntu/projects/tools/ansible/tmp
+    file:
+      path: /home/ubuntu/projects/tools/ansible/tmp
+      state: absent
+
+  # Copy service file to /etc/systemd/system/ dir
+  - name: Copy file prometheus.service
+    copy:
+      src: /home/ubuntu/projects/tools/ansible/cfg/prometheus.service
+      dest: /etc/systemd/system/prometheus.service
+
+  # Start service /etc/systemd/system/prometheus.service
+  - name: Start service prometheus
+    service:
+      name: prometheus
+#      pattern: /usr/bin/foo
+      state: started

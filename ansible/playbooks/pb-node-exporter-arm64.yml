@@ -1,0 +1,51 @@
+---
+- hosts: jet-nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+  # Download file (similar to wget)
+  - name: Download node_exporter-0.18.1.linux-arm64.tar.gz
+    get_url:
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-arm64.tar.gz
+      dest: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-arm64.tar.gz
+
+  # Unarchive file
+  - name: Unarchive file node_exporter-0.18.1.linux-arm64.tar.gz
+    unarchive:
+      src: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-arm64.tar.gz
+      dest: /home/ubuntu/projects/ansible/tmp/
+
+  # Copy file node_exporter to /usr/local/bin/node_exporter
+  - name: Copy file with owner and permissions
+    copy:
+      src: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-arm64/node_exporter
+      dest: /usr/local/bin/node_exporter
+      owner: node_exporter
+      group: node_exporter
+      mode: u=rwx,g=rx,o=rx
+
+  # Clean up .tar.gz
+  - name: Delete file /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-arm64.tar.gz
+    file:
+      state: absent
+      path: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-arm64.tar.gz
+
+  # Clean up dir
+  - name: Delete dir /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-arm64
+    file:
+      path: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-arm64
+      state: absent
+
+  # Copy service file to /etc/systemd/system/ dir
+  - name: Copy file node_exporter.service
+    copy:
+      src: /home/ubuntu/projects/ansible/cfg/node_exporter.service
+      dest: /etc/systemd/system/node_exporter.service
+
+  # Start service /etc/systemd/system/node_exporter.service
+  - name: Start service node_exporter
+    service:
+      name: node_exporter
+#      pattern: /usr/bin/foo
+      state: started
