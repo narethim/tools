@@ -165,5 +165,16 @@ sudo systemctl enable prometheus
 
 [http://localhost:9090/targets](http://localhost:9090/targets)
 
+[http://localhost:9090/metrics](http://localhost:9090/metrics)
+
+[http://localhost:9090/graph](http://localhost:9090/graph)
+
+Try the following metrics:
+
+* promhttp_metric_handler_request_total
+* node_cpu_seconds_total
+
+Click on `Execute` then select `Graph` tab.
+
 # 5. References
 [Configure a Prometeus Monitoring Server with a Grafana Dashboard](https://www.scaleway.com/en/docs/configure-prometheus-monitoring-with-grafana)

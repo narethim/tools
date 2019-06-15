@@ -1,0 +1,23 @@
+[example]
+192.168.0.178 
+
+# ubuntu VM nodes
+[nodes]
+192.168.0.126 
+192.168.0.205
+
+[nodes:vars]
+ansible_ssh_user=ubuntu
+
+
+# vagrant VM nodes
+#[v-nodes]
+#192.168.0.126 
+#192.168.0.205
+
+#[v-nodes:vars]
+#ansible_ssh_user=vagrant
+#ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
+
+
+

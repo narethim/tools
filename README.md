@@ -55,10 +55,10 @@ sudo service grafana-server start
 
 Import the following dashboards:
 
-- 1860
-- 405
-- 5573
-- 9894
+* 1860
+* 405
+* 5573
+* 9894
 
 Get [Pie-chart plugin](https://grafana.com/plugins/grafana-piechart-panel/installation)
 
@@ -72,6 +72,6 @@ sudo service grafana-server restart
 # Check grafana service status
 sudo service grafana-server status
 ```
-### 4.2 Web Interface
+### 4.3 Web Interface
 
 [http:localhost:3000](http:localhost:3000)

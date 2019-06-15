@@ -1,6 +1,6 @@
 # Setup Prometheus
 
-Install Prometheus Node_Exporter v0.18.1 on an armv7 machine such as Rapberry Pi 3 Version B/B+.
+Install Prometheus Node_Exporter v0.18.1 on an armv7 machine such as Raspberry Pi 3 Version B/B+.
 
 # 1. Prepare the environment
 
