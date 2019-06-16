@@ -73,6 +73,7 @@ Setup remote systems.
 
 1. openssh-server
 2. python
+3. sudo NOPASSWD:
 
 ```sh
 # Install openssh-server

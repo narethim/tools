@@ -1,6 +1,9 @@
 [example]
 192.168.0.178 
 
+[test-node]
+192.168.0.205
+
 # ubuntu VM nodes
 [nodes]
 192.168.0.126 

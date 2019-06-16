@@ -1,0 +1,19 @@
+---
+- hosts: test-node
+  remote_user: ubuntu
+  become: yes
+ 
+  tasks:
+
+  # Stop service 
+  - name: Stop service grafana-server
+    service:
+      name: grafana-server
+      state: stopped
+
+  # Remove package
+  - name: Remove "grafana-server" package
+    apt:
+      name: grafana-server
+      state: absent
+
