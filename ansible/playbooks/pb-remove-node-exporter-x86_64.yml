@@ -1,6 +1,6 @@
 ---
-- hosts: test-node
-  remote_user: ubuntu
+- hosts: optiplex-nodes
+  remote_user: nim
   become: yes
  
   tasks:

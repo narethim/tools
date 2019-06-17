@@ -1,68 +1,123 @@
 ---
-- hosts: example
+- hosts: test-nodes
   remote_user: ubuntu
   become: yes
  
   tasks:
 
-  # Create tmp
-  - name: Create tmp dir at /home/ubuntu/projects/tools/ansible/tmp
+  # Create user 'node_exporter'
+  - name: Add the user 'prometheus' with no home dir and no shell
+    user:
+      name: prometheus
+      comment: prometheus
+      create_home: no
+      shell: /usr/sbin/nologin
+
+  # Create dir at `/etc/prometheus`
+  - name: "Create tmp dir at `/etc/prometheus`"
     file:
-      state: present
-      path: /home/ubuntu/projects/tools/ansible/tmp
+      state: directory
+      path: "/etc/prometheus"
+      owner: "prometheus"
+      group: "prometheus"
+
+  # Create dir at `/var/lib/prometheus`
+  - name: "Create tmp dir at `/var/lib/prometheus`"
+    file:
+      state: directory
+      path: "/var/lib/prometheus"
+      owner: "prometheus"
+      group: "prometheus"
+
+  # Create tmp
+  - name: "Create tmp dir at {{ remote_base_path }}/tmp"
+    file:
+      state: directory
+      path: "{{ remote_base_path }}/tmp"
 
   # Download file (similar to wget)
   - name: Download prometheus-2.10.0.linux-amd64.tar.gz
     get_url:
       url: https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.linux-amd64.tar.gz
-      dest: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64.tar.gz
+      dest: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64.tar.gz"
 
   # Unarchive file
   - name: Unarchive file prometheus-2.10.0.linux-amd64.tar.gz
     unarchive:
-      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64.tar.gz
-      dest: /home/ubuntu/projects/tools/ansible/tmp/
+      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64.tar.gz"
+      dest: "{{ remote_base_path }}/tmp"
+      remote_src: yes
 
-  # Copy file prom* to /usr/local/bin/prom*
+  # Copy file prometheus to /usr/local/bin/prometheus
   - name: Copy file with owner and permissions
     copy:
-      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64/prom*
-      dest: /usr/local/bin/prom*
+      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus"
+      remote_src: yes
+      dest: /usr/local/bin/prometheus
+      owner: prometheus
+      group: prometheus
+      mode: u=rwx,g=rx,o=rx
+  # Copy file prometheus to /usr/local/bin/prometheus
+  - name: Copy file with owner and permissions
+    copy:
+      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/promtool"
+      remote_src: yes
+      dest: /usr/local/bin/promtool
       owner: prometheus
       group: prometheus
       mode: u=rwx,g=rx,o=rx
 
-  # Copy file consoles* to /etc/prometheus/prom*
-  - name: Copy file with owner and permissions
+  # Copy dir consoles to /etc/prometheus/consoles
+  - name: Copy dir consoles to /etc/prometheus/consoles
     copy:
-      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64/consoles*
-      dest: /etc/prometheus/consoles*
+      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/consoles"
+      remote_src: yes
+      dest: /etc/prometheus/consoles
+      directory_mode:
+#      state: directory
+      owner: prometheus
+      group: prometheus
+  # Copy dir consoles_libraries to /etc/prometheus/consoles_libraries
+  - name: Copy dir consoles_libraries to /etc/prometheus/consoles_libraries
+    copy:
+      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/consoles_libraries"
+      remote_src: yes
+      dest: /etc/prometheus/consoles_libraries
+      directory_mode:
+#      state: directory
       owner: prometheus
       group: prometheus
 
   # Copy file prometheus.yml to /etc/prometheus/prometheus.yml
   - name: Copy file with owner and permissions
     copy:
-      src: /home/ubuntu/projects/tools/ansible/tmp/prometheus-2.10.0.linux-amd64/prometheus.yml
+      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus.yml"
       dest: /etc/prometheus/prometheus.yml
+      remote_src: yes
       owner: prometheus
       group: prometheus
 
   # Clean up tmp dir
-  - name: Delete dir /home/ubuntu/projects/tools/ansible/tmp
+  - name: "Delete dir {{ remote_base_path }}/tmp"
     file:
-      path: /home/ubuntu/projects/tools/ansible/tmp
+      path: "{{ remote_base_path }}/tmp"
       state: absent
 
   # Copy service file to /etc/systemd/system/ dir
   - name: Copy file prometheus.service
     copy:
-      src: /home/ubuntu/projects/tools/ansible/cfg/prometheus.service
-      dest: /etc/systemd/system/prometheus.service
+      src: "{{ control_base_path }}/projects/tools/ansible/cfg/prometheus.service"
+      dest: "/etc/systemd/system/prometheus.service"
 
-  # Start service /etc/systemd/system/prometheus.service
+  # systemd service /etc/systemd/system/prometheus.service
   - name: Start service prometheus
-    service:
+    systemd:
       name: prometheus
-#      pattern: /usr/bin/foo
       state: started
+
+  # systemd Enable service
+  - name: Enable service prometheus, and not touch the state
+    systemd:
+      name: prometheus
+      enabled: yes
+      

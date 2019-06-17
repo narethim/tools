@@ -1,51 +1,79 @@
 ---
-- hosts: example
-  remote_user: ubuntu
+- hosts: optiplex-nodes
+#- hosts: example
+#- hosts: nodes
+  remote_user: "{{ ansible_ssh_user }}"
   become: yes
  
   tasks:
+
+  # Create user 'node_exporter'
+  - name: Add the user 'node_exporter' with no home dir and no shell
+    user:
+      name: node_exporter
+      comment: node_exporter
+      create_home: no
+      shell: /bin/false
+
+  # Create tmp
+  - name: "Create tmp dir at {{ remote_base_path }}/projects/tools/ansible/tmp"
+    file:
+      path: "{{ remote_base_path }}/tmp"
+      state: directory
+      owner: "{{ ansible_ssh_user }}"
+      group: "{{ ansible_ssh_group}}"
+
   # Download file (similar to wget)
   - name: Download node_exporter-0.18.1.linux-amd64.tar.gz
     get_url:
       url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
-      dest: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-amd64.tar.gz
+      dest: "{{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64.tar.gz"
+      owner: "{{ ansible_ssh_user }}"
+      group: "{{ ansible_ssh_group}}"
 
   # Unarchive file
   - name: Unarchive file node_exporter-0.18.1.linux-amd64.tar.gz
     unarchive:
-      src: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-amd64.tar.gz
-      dest: /home/ubuntu/projects/ansible/tmp/
+      src: "{{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64.tar.gz"
+      dest: "{{ remote_base_path }}/tmp"
+      remote_src: yes
 
   # Copy file node_exporter to /usr/local/bin/node_exporter
   - name: Copy file with owner and permissions
     copy:
-      src: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-amd64/node_exporter
+      src: "{{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64/node_exporter"
+      remote_src: yes
       dest: /usr/local/bin/node_exporter
       owner: node_exporter
       group: node_exporter
       mode: u=rwx,g=rx,o=rx
 
   # Clean up .tar.gz
-  - name: Delete file /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-amd64.tar.gz
+  - name: "Delete file {{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64.tar.gz"
     file:
       state: absent
-      path: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-amd64.tar.gz
+      path: "{{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64.tar.gz"
 
   # Clean up dir
-  - name: Delete dir /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-amd64
+  - name: "Delete dir {{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64"
     file:
-      path: /home/ubuntu/projects/ansible/tmp/node_exporter-0.18.1.linux-amd64
+      path: "{{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64"
       state: absent
 
   # Copy service file to /etc/systemd/system/ dir
   - name: Copy file node_exporter.service
     copy:
-      src: /home/ubuntu/projects/ansible/cfg/node_exporter.service
+      src: "{{ control_base_path }}/projects/tools/ansible/cfg/node_exporter.service"
       dest: /etc/systemd/system/node_exporter.service
 
-  # Start service /etc/systemd/system/node_exporter.service
+  # systemd Start service /etc/systemd/system/node_exporter.service
   - name: Start service node_exporter
-    service:
+    systemd:
       name: node_exporter
-#      pattern: /usr/bin/foo
       state: started
+
+  # systemd Enable service
+  - name: Enable service node_exporter, and not touch the state
+    systemd:
+      name: node_exporter
+      enabled: yes

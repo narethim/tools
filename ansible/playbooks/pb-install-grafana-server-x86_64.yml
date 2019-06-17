@@ -12,8 +12,13 @@
 
   # Start service 
   - name: Start service grafana-server
-    service:
+    systemd:
       name: grafana-server
       state: started
 
+  # Enable service
+  - name: Enable service grafana-server, and not touch the state
+    systemd:
+      name: grafana-server
+      enabled: yes
 

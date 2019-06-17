@@ -1,6 +1,6 @@
 ---
-- hosts: test-node
-  remote_user: ubuntu
+- hosts: jet-nodes
+  remote_user: nvidia
   become: yes
  
   tasks:
