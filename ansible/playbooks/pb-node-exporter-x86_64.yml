@@ -1,5 +1,5 @@
 ---
-- hosts: optiplex-nodes
+- hosts: optiplex_nodes
 #- hosts: example
 #- hosts: nodes
   remote_user: "{{ ansible_ssh_user }}"
