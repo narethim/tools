@@ -8,9 +8,14 @@ A quick and simple Ansibe setup:
 
 ## Set up Ansible control machine
 
-### Install
+### Install ansible on Ubuntu 18.04
+
+Latest Releases via Apt (Ubuntu)
 
 ```sh
+sudo apt update
+sudo apt install software-properties-common
+sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
 ```
 
@@ -91,7 +96,58 @@ sudo apt-get install python -y
 
 [User Guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
 
-[Module Index](https://docs.ansible.com/ansible/latest/modules/modules_by_category.html)
 
-* [Files module](https://docs.ansible.com/ansible/latest/modules/list_of_files_modules.html)
-* [Commands module](https://docs.ansible.com/ansible/latest/modules/list_of_commands_modules.html)
+
+### Frequently used Ansible modules
+
+Clustering modules
+
+* [k8s – Manage Kubernetes (K8s) objects](https://docs.ansible.com/ansible/latest/modules/k8s_module.html#k8s-module)
+* [k8s_facts – Describe Kubernetes (K8s) objects](https://docs.ansible.com/ansible/latest/modules/k8s_facts_module.html#k8s-facts-module)
+* [k8s_service – Manage Services on Kubernetes](https://docs.ansible.com/ansible/latest/modules/k8s_service_module.html#k8s-service-module)
+
+Commands module
+
+* [command – Execute commands on targets](https://docs.ansible.com/ansible/latest/modules/command_module.html#command-module)
+* [script – Runs a local script on a remote node after transferring it](https://docs.ansible.com/ansible/latest/modules/script_module.html#script-module)
+* [shell – Execute shell commands on targets](https://docs.ansible.com/ansible/latest/modules/shell_module.html#shell-module)
+
+File modules
+
+* [copy – Copy files to remote locations](https://docs.ansible.com/ansible/latest/modules/copy_module.html#copy-module)
+* [fetch – Fetch files from remote nodes](https://docs.ansible.com/ansible/latest/modules/fetch_module.html#fetch-module)
+* [file – Manage files and file properties](https://docs.ansible.com/ansible/latest/modules/file_module.html#file-module)
+
+Monitoring modules
+
+* [grafana_plugin – Manage Grafana plugins via grafana-cli](https://docs.ansible.com/ansible/latest/modules/grafana_plugin_module.html#grafana-plugin-module)
+
+Net Tools modules
+
+* [get_url – Downloads files from HTTP, HTTPS, or FTP to node](https://docs.ansible.com/ansible/latest/modules/get_url_module.html#get-url-module)
+
+Notification modules
+
+* [mail – Send an email](https://docs.ansible.com/ansible/latest/modules/mail_module.html#mail-module)
+
+Packaging modules
+
+* [apt – Manages apt-packages](https://docs.ansible.com/ansible/latest/modules/apt_module.html#apt-module)
+* [yum – Manages packages with the yum package manager](https://docs.ansible.com/ansible/latest/modules/yum_module.html#yum-module)
+
+Source Control modules
+
+* [git – Deploy software (or files) from git checkouts](https://docs.ansible.com/ansible/latest/modules/git_module.html#git-module)
+
+
+System modules
+
+* [modprobe – Load or unload kernel modules](https://docs.ansible.com/ansible/latest/modules/modprobe_module.html#modprobe-module)
+* [ping – Try to connect to host, verify a usable python and return pong on success](https://docs.ansible.com/ansible/latest/modules/ping_module.html#ping-module)
+* [service – Manage services](https://docs.ansible.com/ansible/latest/modules/service_module.html#service-module)
+* [setup – Gathers facts about remote hosts](https://docs.ansible.com/ansible/latest/modules/setup_module.html#setup-module)
+* [systemd – Manage services](https://docs.ansible.com/ansible/latest/modules/systemd_module.html#systemd-module)
+* [user – Manage user accounts](https://docs.ansible.com/ansible/latest/modules/user_module.html#user-module)
+
+Utilities modules
+* [debug – Print statements during execution](https://docs.ansible.com/ansible/latest/modules/debug_module.html#debug-module)
