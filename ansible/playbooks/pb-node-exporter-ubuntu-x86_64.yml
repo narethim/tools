@@ -1,0 +1,42 @@
+---
+- hosts: test-nodes
+  remote_user: "{{ ansible_ssh_user }}"
+  become: yes
+ 
+  tasks:
+
+  # Create user 'node_exporter'
+  - name: Add the user 'node_exporter' with no home dir and no shell
+    user:
+      name: node_exporter
+      comment: node_exporter
+      create_home: no
+      shell: /bin/false
+
+
+  # Copy file node_exporter to /usr/local/bin/node_exporter
+  - name: Copy file with owner and permissions
+    copy:
+      src: "{{ control_base_path }}/tmp/node_exporter-0.18.1.linux-amd64/node_exporter"
+      dest: /usr/local/bin/node_exporter
+      owner: node_exporter
+      group: node_exporter
+      mode: u=rwx,g=rx,o=rx
+
+  # Copy service file to /etc/systemd/system/ dir
+  - name: Copy file node_exporter.service
+    copy:
+      src: "{{ control_base_path }}/projects/tools/ansible/cfg/node_exporter.service"
+      dest: /etc/systemd/system/node_exporter.service
+
+  # systemd Start service /etc/systemd/system/node_exporter.service
+  - name: Start service node_exporter
+    systemd:
+      name: node_exporter
+      state: started
+
+  # systemd Enable service
+  - name: Enable service node_exporter, and not touch the state
+    systemd:
+      name: node_exporter
+      enabled: yes

@@ -1,0 +1,32 @@
+---
+- hosts: managed_nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+
+  # script
+  - name: "Bandwidth limiting with 'Token Bucket Filtering' (TBF)"
+    script: /home/nvidia/projects/tools/ansible/scripts/tc-tbf-and-netem-03.sh
+
+# ------------------------------------
+# Test
+# ------------------------------------
+#
+# Run 'iperf' server on jet-j
+# 
+#  $ sudo iperf -s -u -i 1
+#
+#  
+# Run 'iperf' client on jet-b
+# 
+#  $ sudo iperf -c jet-j -u
+#
+#  
+
+
+#
+# kubectl get nodes -o wide
+#
+# jet-b, jet-j  Ready 
+#

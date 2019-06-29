@@ -1,0 +1,12 @@
+---
+- hosts: managed_nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+
+  # script
+  - name: "Packet duplicate 1% (/home/nvidia/projects/tools/ansible/scripts/tc-packet-duplicate.sh)"
+    script: /home/nvidia/projects/tools/ansible/scripts/tc-packet-duplicate.sh
+
+

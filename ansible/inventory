@@ -1,82 +1,71 @@
-[example]
-192.168.0.178 
 
-[example:vars]
-ansible_ssh_user=ubuntu
-ansible_ssh_group=ubuntu
-remote_base_path=/home/ubuntu
-control_base_path=/home/ubuntu
+[nano_a]
+192.168.1.112
 
+[jet_b]
+192.168.1.131
 
-[test-nodes]
-192.168.0.205
+[jet_j]
+192.168.1.144
 
-[test-nodes:vars]
-ansible_ssh_user=ubuntu
-ansible_ssh_group=ubuntu
-remote_base_path=/home/ubuntu
-control_base_path=/home/ubuntu
+[develmachine1]
+192.168.1.142
+
+[develmachine2]
+192.168.1.147
 
 
-# ubuntu VM nodes
-[nodes]
-192.168.0.126 
-192.168.0.205
-
-[nodes:vars]
-ansible_ssh_user=ubuntu
-ansible_ssh_group=ubuntu
-remote_base_path=/home/ubuntu
-control_base_path=/home/ubuntu
+# Ansible Control Node
+[control_nodes]
+192.168.1.142
 
 
-# vagrant VM nodes
-#[v-nodes]
-#192.168.0.126 
-#192.168.0.205
+# Ansible Managed Node
+[managed_nodes]
+192.168.1.112
+192.168.1.131
+192.168.1.144
 
-#[v-nodes:vars]
-#ansible_ssh_user=vagrant
-#ansible_ssh_private_key_file=~/.vagrant.d/insecure_private_key
+[ansible_all:children]
+control_nodes
+managed_nodes
 
-#---------------------------------------
-# Pi nodes
-#---------------------------------------
-[pi-nodes]
-192.168.0.161 
-192.168.0.246
-
-[pi-nodes:vars]
-ansible_ssh_user=pi
-ansible_ssh_group=pi
-remote_base_path=/home/pi
-control_base_path=/home/ubuntu
-#---------------------------------------
-
-#---------------------------------------
-# Jetson nodes
-#---------------------------------------
-[jetson-nodes]
-192.168.0.161 
-
-[jetson-nodes:vars]
+[ansible_all:vars]
 ansible_ssh_user=nvidia
 ansible_ssh_group=nvidia
 remote_base_path=/home/nvidia
-control_base_path=/home/ubuntu
-#---------------------------------------
+control_base_path=/home/nvidia
 
 
-#
-# small Dell Optiplex nodes
-#
-[optiplex-nodes]
-192.168.0.233
+# K3S cluster nodes
 
-[optiplex-nodes:vars]
-ansible_ssh_user=nim
-ansible_ssh_group=nim
-remote_base_path=/home/nim
-control_base_path=/home/ubuntu
+[k3s_master]
+192.168.1.112
+
+[k3s_nodes]
+192.168.1.131
+192.168.1.144
+
+[k3s_all:children]
+k3s_master
+k3s_nodes
+
+[k3s_all:vars]
+ansible_ssh_user=nvidia
+ansible_ssh_group=nvidia
+remote_base_path=/home/nvidia
+control_base_path=/home/nvidia
+
+
+# 
+[test_nodes]
+192.168.1.147
+
+[test_nodes:vars]
+ansible_ssh_user=nvidia
+ansible_ssh_group=nvidia
+remote_base_path=/home/nvidia
+control_base_path=/home/nvidia
+
 
 

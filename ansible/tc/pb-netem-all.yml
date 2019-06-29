@@ -1,0 +1,50 @@
+---
+- hosts: managed_nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+
+  # script using loop
+#  - name: "loss 30% + corruption 5% + duplicate 3%"
+#    script: "/home/nvidia/projects/tools/ansible/scripts/{{ item }}"
+#    loop:
+#       - tc-packet-corrupt.sh
+#       - tc-packet-loss.sh
+
+  # script --------------
+  - name: "scripts/tc-packet-delay.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-delay.sh"
+
+  # Pause for 30 seconds.
+  - pause:
+      prompt: "wait 30 seconds..."
+      seconds: 30
+
+  # script --------------
+  - name: "scripts/tc-packet-corrupt.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-corrupt.sh"
+
+  # Pause for 30 seconds.
+  - pause:
+      prompt: "wait 30 seconds..."
+      seconds: 30
+
+  # script --------------
+  - name: "scripts/tc-packet-loss.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-loss.sh"
+
+  # Pause for 30 seconds.
+  - pause:
+      prompt: "wait 30 seconds..."
+      seconds: 30
+
+  # script --------------
+  - name: "scripts/tc-packet-duplicate.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-duplicate.sh"
+
+  # Pause for 30 seconds.
+  - pause:
+      prompt: "wait 30 seconds..."
+      seconds: 30
+

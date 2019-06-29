@@ -1,0 +1,52 @@
+---
+- hosts: example
+  remote_user: "{{ ansible_ssh_user }}"
+  become: yes
+ 
+  tasks:
+
+
+  # Create tmp
+  - name: "Create tmp dir at {{ remote_base_path }}/tmp"
+    file:
+      path: "{{ remote_base_path }}/tmp"
+      state: directory
+      owner: "{{ ansible_ssh_user }}"
+      group: "{{ ansible_ssh_group}}"
+
+  # -------------------------------------------------------------------
+  # Node Exporter
+  # -------------------------------------------------------------------
+
+  # Download file (similar to wget)
+  - name: Download node_exporter-0.18.1.linux-amd64.tar.gz
+    get_url:
+      url: https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
+      dest: "{{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64.tar.gz"
+      owner: "{{ ansible_ssh_user }}"
+      group: "{{ ansible_ssh_group}}"
+
+  # Unarchive file
+  - name: Unarchive file node_exporter-0.18.1.linux-amd64.tar.gz
+    unarchive:
+      src: "{{ remote_base_path }}/tmp/node_exporter-0.18.1.linux-amd64.tar.gz"
+      dest: "{{ remote_base_path }}/tmp"
+
+  # -------------------------------------------------------------------
+  # Prometheus
+  # -------------------------------------------------------------------
+
+  # Download file (similar to wget)
+  - name: Download prometheus-2.10.0.linux-amd64.tar.gz
+    get_url:
+      url: https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.linux-amd64.tar.gz
+      dest: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64.tar.gz"
+
+  # Unarchive file
+  - name: Unarchive file prometheus-2.10.0.linux-amd64.tar.gz
+    unarchive:
+      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64.tar.gz"
+      dest: "{{ remote_base_path }}/tmp"
+
+
+

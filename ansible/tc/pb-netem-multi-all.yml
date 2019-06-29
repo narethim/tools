@@ -1,0 +1,54 @@
+---
+- hosts: managed_nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+
+  # script using loop
+#  - name: "loss 5% + corruption 5% + duplicate 3%"
+#    script: "/home/nvidia/projects/tools/ansible/scripts/{{ item }}"
+#    loop:
+#       - tc-packet-corrupt.sh
+#       - tc-packet-loss.sh
+
+  # script --------------
+  - name: "scripts/tc-packet-multi-mod3.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-multi-mod3.sh"
+
+  # Pause for 5 minutes.
+  - pause:
+      prompt: "wait 5 minutes..."
+      minutes: 5
+
+  # script --------------
+  - name: "scripts/tc-packet-multi-mod4.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-multi-mod4.sh"
+
+  # Pause for 5 minutes.
+  - pause:
+      prompt: "wait 5 minutes..."
+      minutes: 5
+
+  # script --------------
+  - name: "scripts/tc-packet-multi-mod5.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-multi-mod5.sh"
+
+  # Pause for 5 minutes.
+  - pause:
+      prompt: "wait 5 minutes..."
+      minutes: 5
+
+  # script --------------
+  - name: "scripts/tc-packet-multi-mod6.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-packet-multi-mod6.sh"
+
+  # Pause for 5 minutes.
+  - pause:
+      prompt: "wait 5 minutes..."
+      minutes: 5
+
+  # script --------------
+  - name: "scripts/tc-reset.sh"
+    script: "/home/nvidia/projects/tools/ansible/scripts/tc-reset.sh"
+

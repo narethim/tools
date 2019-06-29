@@ -1,0 +1,42 @@
+---
+- hosts: managed_nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+
+  # script
+  - name: "Bandwidth limiting with 'Token Bucket Filtering' (TBF)"
+    script: /home/nvidia/projects/tools/ansible/scripts/tc-tbf-128kbit.sh
+
+
+# ------------------------------------
+# Test
+# ------------------------------------
+#
+# Run 'iperf' server on jet-j
+# 
+#  $ sudo iperf -s -u -i 1
+#
+#  
+# Run 'iperf' client on jet-b
+# 
+#  $ sudo iperf -c jet-j -u
+#
+#  
+
+
+# nvidia@jet-b:~/tmp$ sudo iperf -c jet-j -u
+# ------------------------------------------------------------
+# Client connecting to jet-j, UDP port 5001
+# Sending 1470 byte datagrams, IPG target: 11215.21 us (kalman adjust)
+# UDP buffer size:  208 KByte (default)
+# ------------------------------------------------------------
+# [  3] local 192.168.1.131 port 58277 connected with 192.168.1.144 port 5001
+# [ ID] Interval       Transfer     Bandwidth
+# [  3]  0.0-10.0 sec  1.25 MBytes  1.05 Mbits/sec
+# [  3] Sent 893 datagrams
+# [  3] Server Report:
+# [  3]  0.0-11.0 sec   151 KBytes   112 Kbits/sec   0.000 ms  786/  891 (0%)
+# [  3] 0.00-11.02 sec  1 datagrams received out-of-order
+

@@ -29,30 +29,11 @@
       owner: "prometheus"
       group: "prometheus"
 
-  # Create tmp
-  - name: "Create tmp dir at {{ remote_base_path }}/tmp"
-    file:
-      state: directory
-      path: "{{ remote_base_path }}/tmp"
-
-  # Download file (similar to wget)
-  - name: Download prometheus-2.10.0.linux-amd64.tar.gz
-    get_url:
-      url: https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.linux-amd64.tar.gz
-      dest: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64.tar.gz"
-
-  # Unarchive file
-  - name: Unarchive file prometheus-2.10.0.linux-amd64.tar.gz
-    unarchive:
-      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64.tar.gz"
-      dest: "{{ remote_base_path }}/tmp"
-      remote_src: yes
 
   # Copy file prometheus to /usr/local/bin/prometheus
   - name: Copy file with owner and permissions
     copy:
-      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus"
-      remote_src: yes
+      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus"
       dest: /usr/local/bin/prometheus
       owner: prometheus
       group: prometheus
@@ -60,8 +41,7 @@
   # Copy file prometheus to /usr/local/bin/prometheus
   - name: Copy file with owner and permissions
     copy:
-      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/promtool"
-      remote_src: yes
+      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/promtool"
       dest: /usr/local/bin/promtool
       owner: prometheus
       group: prometheus
@@ -70,38 +50,28 @@
   # Copy dir consoles to /etc/prometheus/consoles
   - name: Copy dir consoles to /etc/prometheus/consoles
     copy:
-      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/consoles"
-      remote_src: yes
+      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/consoles"
       dest: /etc/prometheus/consoles
       directory_mode:
-#      state: directory
       owner: prometheus
       group: prometheus
   # Copy dir consoles_libraries to /etc/prometheus/consoles_libraries
-  - name: Copy dir consoles_libraries to /etc/prometheus/consoles_libraries
+  - name: Copy dir consoles_libraries to /etc/prometheus/console_libraries
     copy:
-      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/consoles_libraries"
-      remote_src: yes
+      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/console_libraries"
       dest: /etc/prometheus/consoles_libraries
       directory_mode:
-#      state: directory
       owner: prometheus
       group: prometheus
 
   # Copy file prometheus.yml to /etc/prometheus/prometheus.yml
   - name: Copy file with owner and permissions
     copy:
-      src: "{{ remote_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus.yml"
+      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus.yml"
       dest: /etc/prometheus/prometheus.yml
-      remote_src: yes
       owner: prometheus
       group: prometheus
 
-  # Clean up tmp dir
-  - name: "Delete dir {{ remote_base_path }}/tmp"
-    file:
-      path: "{{ remote_base_path }}/tmp"
-      state: absent
 
   # Copy service file to /etc/systemd/system/ dir
   - name: Copy file prometheus.service

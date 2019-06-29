@@ -1,0 +1,11 @@
+---
+- hosts: managed_nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+
+  # script
+  - name: "Delay 200ms and random +-10ms uniform distribution with correlation value 25% (/home/nvidia/projects/tools/ansible/scripts/tc-packet-delay.sh)"
+    script: /home/nvidia/projects/tools/ansible/scripts/tc-packet-delay.sh
+

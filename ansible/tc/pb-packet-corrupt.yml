@@ -1,0 +1,12 @@
+---
+- hosts: managed_nodes
+  remote_user: nvidia
+  become: yes
+ 
+  tasks:
+
+  # script
+  - name: "Packet corruption 5% (/home/nvidia/projects/tools/ansible/scripts/tc-packet-corrupt.sh)"
+    script: /home/nvidia/projects/tools/ansible/scripts/tc-packet-corrupt.sh
+
+
