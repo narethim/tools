@@ -1,5 +1,5 @@
 ---
-- hosts: jet-nodes
+- hosts: jet_nodes
   remote_user: nvidia
   become: yes
  

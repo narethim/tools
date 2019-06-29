@@ -1,5 +1,5 @@
 ---
-- hosts: test-nodes
+- hosts: test_nodes
   remote_user: ubuntu
   become: yes
  

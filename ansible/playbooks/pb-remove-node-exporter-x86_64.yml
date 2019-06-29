@@ -1,5 +1,5 @@
 ---
-- hosts: optiplex-nodes
+- hosts: optiplex_nodes
   remote_user: nim
   become: yes
  

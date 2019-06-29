@@ -1,5 +1,5 @@
 ---
-- hosts: pi-nodes
+- hosts: pi_nodes
   remote_user: pi
   become: yes
  
