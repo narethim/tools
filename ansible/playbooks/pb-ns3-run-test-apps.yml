@@ -1,0 +1,21 @@
+---
+- hosts: web
+  remote_user: nim
+ 
+  tasks:
+
+  - debug: var=ansible_distribution
+
+  # Run hello-simulator 
+  - name: Run hello-simulator './waf --run  hello-simulator'
+    command: "./waf --run hello-simulator"
+    args:
+      chdir: "{{ remote_base_path }}/projects/ns3/tarball/ns-allinone-3.29/ns-3.29"
+
+  # Run hello-simulator 
+  - name: Run hello-simulator './waf --run  scratch/scratch-simulator'
+    command: "./waf --run scratch/scratch-simulator"
+    args:
+      chdir: "{{ remote_base_path }}/projects/ns3/tarball/ns-allinone-3.29/ns-3.29"
+
+

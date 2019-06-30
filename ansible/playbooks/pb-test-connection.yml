@@ -1,0 +1,19 @@
+---
+- hosts: web
+  remote_user: nim
+  tasks:
+    # test connection
+    - ping: 
+
+    - debug: var=ansible_distribution
+
+# Alternative play
+- hosts: web_server
+  remote_user: ubuntu
+  tasks:
+    - name: test connection with 'ping' module
+      ping:
+
+    - name: debug 'var=ansible_distribution'
+      debug: var=ansible_distribution
+

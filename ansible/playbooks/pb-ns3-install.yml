@@ -1,0 +1,48 @@
+---
+- hosts: web
+  remote_user: nim
+ 
+  tasks:
+
+  - debug: var=ansible_distribution
+
+  # Create dir at `{{ remote_base_path }}/projects/ns3/tarball`
+  - name: "Create tmp dir at `{{ remote_base_path }}/projects/ns3/tarball`"
+    file:
+      state: directory
+      path: "{{ remote_base_path }}/projects/ns3/tarball"
+      owner: "nim"
+      group: "nim"
+
+  # Download file (similar to wget)
+  - name: Download 'ns-allinone-3.29.tar.bz2'
+    get_url:
+      url:  http://www.nsnam.org/release/ns-allinone-3.29.tar.bz2
+      dest: "{{ remote_base_path }}/projects/ns3/tarball/ns-allinone-3.29.tar.bz2"
+
+  # Unarchive file
+  - name: Unarchive file 'ns-allinone-3.29.tar.bz2'
+    unarchive:
+      src: "{{ remote_base_path }}/projects/ns3/tarball/ns-allinone-3.29.tar.bz2"
+      dest: "{{ remote_base_path }}/projects/ns3/tarball"
+      remote_src: yes
+
+  # build it 
+  - name: build it './build.py --enable-examples --enable-tests'
+    command: "./build.py --enable-examples --enable-tests"
+    args:
+      chdir: "{{ remote_base_path }}/projects/ns3/tarball/ns-allinone-3.29"
+
+  # Run hello-simulator 
+  - name: Run hello-simulator './waf --run  hello-simulator'
+    command: "./waf --run hello-simulator"
+    args:
+      chdir: "{{ remote_base_path }}/projects/ns3/tarball/ns-allinone-3.29/ns-3.29"
+
+  # Run hello-simulator 
+  - name: Run hello-simulator './waf --run  scratch/scratch-simulator'
+    command: "./waf --run scratch/scratch-simulator"
+    args:
+      chdir: "{{ remote_base_path }}/projects/ns3/tarball/ns-allinone-3.29/ns-3.29"
+
+

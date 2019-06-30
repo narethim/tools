@@ -1,0 +1,181 @@
+---
+- name: Configure NS-3 machine
+  hosts: web
+  remote_user: nim
+  become: True
+  tasks:
+
+    # Install C/C++ and Python
+    - name: Install C/C++ and Python
+      apt: 
+        name: "{{ item }}"
+        update_cache: yes
+      loop:
+        - gcc 
+        - g++ 
+        - python 
+        - python-dev 
+        - mercurial 
+        - python-setuptools 
+        - git 
+
+    # Netanim animator
+    - name: Install Netanim animator
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - qt5-default 
+        - gir1.2-goocanvas-2.0 
+        - python-gi 
+        - python-gi-cairo 
+        - python-pygraphviz 
+        - python3-gi 
+        - python3-gi-cairo 
+        - python3-pygraphviz 
+        - gir1.2-gtk-3.0 
+        - ipython 
+        - ipython3 
+
+    # MPI-based distributed emulation
+    - name: Install Support for build tool - mpi
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - openmpi-bin 
+        - openmpi-common 
+        - openmpi-doc 
+        - libopenmpi-dev 
+
+    # Support for bake build tool
+    - name: Install Support for build tool - bake
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - autoconf 
+        - cvs 
+        - bzr 
+        - unrar 
+
+    # Debugging
+    - name: Install Debugging
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - gdb 
+        - valgrind 
+
+    # Doxygen and related inline documentation
+    - name: Install Doxygen and related inline documentation
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - doxygen 
+        - graphviz 
+        - imagemagick 
+        - texlive 
+        - texlive-extra-utils 
+        - texlive-latex-extra
+        - texlive-font-utils 
+        - texlive-lang-portuguese
+        - dvipng
+        - latexmk
+  
+    # The ns-3 manual and tutorial are written in reStructuredText for Sphinx
+    - name: Install Sphinx
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - python-sphinx
+        - dia
+
+    # GNU science library
+    - name: Install GNU science libraries
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - gsl-bin
+#        - libgsl2
+        - libgsl-dev
+
+    # The Network Simulation Cradle
+    - name: Install The Network Simulation Cradle
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - flex
+        - bison
+        - libfl-dev
+
+    # To read pcap packet traces
+    - name: Install tcpdump
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - tcpdump
+        - wireshark
+
+    # Database support for statistics framework
+    - name: Install Database support for statistics framework
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - sqlite
+        - sqlite3
+        - libsqlite3-dev
+
+    # Xml-based version of the config store (requires libxml2 >= version 2.7)
+    - name: Install Xml-based version of the config store
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - libxml2
+        - libxml2-dev
+        
+    # Support for generating modified python bindings 
+    - name: Install Support for generating modified python bindings 
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - cmake
+        - libxml2-dev
+        - libc6-dev 
+        - libc6-dev-i386 
+        - libclang-dev 
+        - llvm-dev 
+        - automake
+        - python-pip
+
+
+    # A GTK-based configuration system 
+    - name: Install A GTK-based configuration system 
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - libgtk2.0-0 
+        - libgtk2.0-dev
+        - libgtk-3-dev
+        
+    # To experiment with virtual machines and ns-3 
+    - name: Install To experiment with virtual machines and ns-3 
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - vtun 
+        - lxc 
+        
+    # Support for openflow module (requires some boost libraries) 
+    - name: Install Support for openflow module (requires some boost libraries) 
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - libboost-signals-dev 
+        - libboost-filesystem-dev 
+         
+ 
+    # Additional app 
+    - name: Install Support for tree 
+      apt: 
+        name: "{{ item }}"
+      loop:
+        - tree 
+
