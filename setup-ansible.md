@@ -14,9 +14,9 @@ Latest Releases via Apt (Ubuntu)
 
 ```sh
 sudo apt update
-sudo apt install software-properties-common
+sudo apt install -y software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt install ansible
+sudo apt install -y ansible
 ```
 
 Verify
@@ -68,6 +68,32 @@ ansible all -m ping
 
 # Ad-hoc command
 ansible all -a date
+```
+### Configure ansible to use python3
+
+Ansible is configured to use python version 2.7.xx
+
+```sh
+$ ansible --version
+ansible 2.8.1
+  config file = /etc/ansible/ansible.cfg
+  configured module search path = [u'/home/nim/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/dist-packages/ansible
+  executable location = /usr/bin/ansible
+  python version = 2.7.12 (default, Nov 12 2018, 14:36:49) [GCC 5.4.0 20160609]
+```
+
+Edit the inventory file `/etc/ansible/hosts` or `inventory` to include a var  `ansible_python_interpreter=/usr/bin/python3`
+
+For example:
+
+```sh
+[web]
+xxx.xxx.xxx.xxx  
+xxx.xxx.xxx.xxx  
+
+[web:vars]
+ansible_python_interpreter=/usr/bin/python3
 ```
 
 ## Set up Ansible remote systems
