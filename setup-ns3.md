@@ -56,11 +56,11 @@ ansible-playbook playbook/pb-test-connection2.yml
 
 ```sh
 # Add the necessary packages for ns-3
-ansible-playbook playbook/pb-ns3-prerequisite.yml
+ansible-playbook playbooks/pb-ns3-prerequisite.yml
 
 # Install and build
-ansible-playbook playbook/pb-ns3-install.yml
+ansible-playbook playbooks/pb-ns3-install.yml
 
 # Test it by running hello-simulator
-ansible-playbook playbook/pb-ns3-run-test-apps.yml
+ansible-playbook playbooks/pb-ns3-run-test-apps.yml
 ```

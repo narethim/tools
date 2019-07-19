@@ -1,7 +1,7 @@
 ---
 - name: Configure NS-3 machine
   hosts: web
-  remote_user: nim
+#  remote_user: ubuntu
   become: True
   tasks:
 
