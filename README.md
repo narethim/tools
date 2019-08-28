@@ -20,9 +20,14 @@ Frequently used tools
 
 ### 3.1 Installation
 
-* Install `Prometheus` and `Node Exporter` on `x86_64` system [here](prom-systemd-setup.md)
+#### Prometheus
+
+* Install `Prometheus` and `Node Exporter` on `x86_64` system [here](prom-systemd-setup-x86_64.md)
 * Install `Prometheus` and `Node Exporter` on `arm64` system [here](prom-systemd-setup-arm64.md)
 
+#### Node Exporter
+
+* Install `Node Exporter` on a `x86_64` (x86_64, VM) [here](setup-prometheus-node-exporter-x86_64.md)
 * Install `Node Exporter` on a `arm64` (NVIDIA Jetson TX2, Nano) [here](setup-prometheus-node-exporter-arm64.md)
 * Install `Node Exporter` on a `armv7` (Rpi 3 B/B+) [here](setup-prometheus-node-exporter-armv7.md)
 
