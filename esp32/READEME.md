@@ -8,7 +8,7 @@
 
 [Pinout Reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
 
-![esp32-pinout](docs/images/esp32-pinout-chip-ESP-WROOM-32.png)
+![esp32-pinout](docs/images/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-updated.jpg)
 
 ### Projects
 
