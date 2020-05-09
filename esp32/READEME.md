@@ -8,6 +8,8 @@
 
 [Pinout Reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
 
+![esp32-pinout](docs/images/esp32-pinout-chip-ESP-WROOM-32.png)
+
 ### Projects
 
 [Courses](https://www.espressif.com/en/ecosystem/iot-college/courses)
@@ -27,3 +29,11 @@
 ## Standard Setup of Toolchain for Linux machine
 
 [Setup Linux Toolchain from Scratch](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/linux-setup-scratch.html)
+
+## Espressif Eclipse Plugins
+
+[Espressif Eclipse Plugins](https://github.com/espressif/idf-eclipse-plugin)
+
+## Arduino core for the ESP32
+
+[Arduino core for the ESP32](https://github.com/espressif/arduino-esp32)
