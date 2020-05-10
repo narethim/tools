@@ -37,3 +37,40 @@
 ## Arduino core for the ESP32
 
 [Arduino core for the ESP32](https://github.com/espressif/arduino-esp32)
+
+## Set ENV
+
+```sh
+. $HOME/esp/esp-idf/export.sh
+```
+
+## Serial
+
+Add user to serial group
+
+```sh
+sudo usermod -a -G dialout $USER
+
+# May need the following also
+sudo chmod 666 /dev/ttyUSB0
+```
+
+### Flash
+
+```sh
+# idf.py -p PORT [-b BAUD] flash
+# PORT = /dev/ttyUSB0
+# BAUD = 9600
+
+# flash using default baud rate
+idf.py -p /dev/ttyUSB0 flash
+
+# flash using 9600 baud rate
+idf.py -p /dev/ttyUSB0 -b 9600 flash
+```
+
+### Monitor
+
+```sh
+idf.py -p /dev/ttyUSB0 monitor
+```
