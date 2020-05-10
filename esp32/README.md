@@ -1,5 +1,11 @@
 # ESP32
 
+## ESP32 My boards
+
+[MELIFE 2 Pack ESP32-DevKitC core Board ESP32 Development Board ESP32-WROOM-32D for Arduino IDE ($13.99 @Amazon)](https://www.amazon.com/dp/B0811LGWY2?psc=1&ref=ppx_pop_dt_b_product_details)
+
+[Demo code @ GitHub](https://github.com/espressif/esp-idf)
+
 ## ESP32 info
 
 [www.espressif.com](https://www.espressif.com/en/products/socs/esp32/overview)
@@ -9,6 +15,8 @@
 [Pinout Reference](https://randomnerdtutorials.com/esp32-pinout-reference-gpios/)
 
 ![esp32-pinout](docs/images/ESP32-DOIT-DEVKIT-V1-Board-Pinout-36-GPIOs-updated.jpg)
+
+![esp32-Pinout 2](docs/images/71d6+P4PUzL._AC_SL1067_.jpg)
 
 ### Projects
 
@@ -74,3 +82,11 @@ idf.py -p /dev/ttyUSB0 -b 9600 flash
 ```sh
 idf.py -p /dev/ttyUSB0 monitor
 ```
+
+## YouTube resources
+
+### Kolban Technical Tutorials
+
+[ESP32 Technical tutorial (YouTube)](https://www.youtube.com/playlist?list=PLB-czhEQLJbWMOl7Ew4QW1LpoUUE7QMOo)
+
+[ESP32 Code snippet (GitHub)](https://github.com/nkolban/esp32-snippets)
