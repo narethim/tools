@@ -6,6 +6,8 @@
 
 [Raspberry Pi Documentation](https://www.raspberrypi.org/documentation/)
 
+[ARM assembler in Raspberry Pi](arm-assembler-rpi.md)
+
 ### Projects
 
 [Raspberry Pi Projects](https://projects.raspberrypi.org/en/projects)
