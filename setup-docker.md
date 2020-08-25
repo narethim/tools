@@ -7,9 +7,11 @@ For Ubuntu
 sudo apt  install docker.io
 
 sudo usermod -aG docker $USER
+```
 
-logout and log back in
+Logout and login
 
+```sh
 docker container run hello-world
 ```
 
