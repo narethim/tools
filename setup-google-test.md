@@ -3,13 +3,17 @@
 
 ## Prerequisite
 
-* CMake
+* Install Development Tools
+* Install CMake
 
 ## Install CMake
 
 For Ubuntu
 
 ```sh
+# install development tools
+sudo apt-get install build-essential
+
 # install cmake
 sudo apt-get install cmake
 ```
@@ -29,8 +33,8 @@ cd /usr/src/gtest
 sudo cmake CMakeLists.txt
 sudo make
 
-# copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
-sudo cp lib/*.a /usr/lib
+# build gtest
+sudo make install
 ```
 
 ## Resources
