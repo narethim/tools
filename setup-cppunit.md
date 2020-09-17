@@ -4,6 +4,7 @@
 ## Prerequisite
 
 * Install CppUnit library
+* Install xsltproc
 
 ## Install CppUnit library
 
@@ -12,6 +13,9 @@ For Ubuntu
 ```sh
 # install CppUnit
 sudo apt install libcppunit-dev libcppunit-doc
+
+# install xsltproc
+sudo apt install xsltproc
 ```
 
 ## Example
