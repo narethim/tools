@@ -10,7 +10,7 @@ For Ubuntu
 
 Download from [https://www.jenkins.io/download](https://www.jenkins.io/download)
 
-Select `Ubuntu/Debuan` link under "`Download Jenkins 2.235.5 LTS For:`
+Select `Ubuntu/Debian` link under "`Download Jenkins 2.235.5 LTS For:`
 
 ## Install Jenkins as a service
 
@@ -81,3 +81,8 @@ Email: example@ga.com
 ```sh
 Jenkins URL: http://localhost:8080
 ```
+
+## References
+
+* [Installing Jenkins](https://www.jenkins.io/doc/book/installing/)
+* [Getting started with the Guided Tour](https://www.jenkins.io/doc/pipeline/tour/getting-started/)
