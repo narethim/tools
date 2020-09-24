@@ -4,6 +4,11 @@
 
 [Docker + cAdvisor + Prometheus + Grafana Stack Monitoring](docker-prometheus-grafana.md)
 
+## Docker + Prometheus + Grafana Stack Monitoring
+
+YouTube
+[Docker Monitoring With Prometheus And Grafana | etc/docker/daemon.json | Thetips4you](https://www.youtube.com/watch?v=r-B9TxJ-opg&t=674s)
+
 ## Grafana
 
 ### Grafana tutorial
