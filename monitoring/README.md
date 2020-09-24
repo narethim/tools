@@ -2,7 +2,7 @@
 
 ## Docker + Prometheus + Grafana Stack Monitoring
 
-[Docker + Prometheus + Grafana Stack Monitoring](docker-prometheus-grafana.md)
+[Docker + cAdvisor + Prometheus + Grafana Stack Monitoring](docker-prometheus-grafana.md)
 
 ## Grafana
 
