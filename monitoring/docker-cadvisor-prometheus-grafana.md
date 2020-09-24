@@ -1,4 +1,4 @@
-# Docker + Prometheus + Grafana Stack Monitoring
+# Docker + cAdvisor + Prometheus + Grafana Stack Monitoring
 
 ## YouTube Play list # 1-9
 
