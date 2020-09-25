@@ -30,10 +30,12 @@ sudo apt  install libgtest-dev
 
 # build gtest
 cd /usr/src/gtest
-sudo cmake CMakeLists.txt
+mkdir build
+cd build
+sudo cmake ..
 sudo make
 
-# build gtest
+# Install gtest
 sudo make install
 ```
 
