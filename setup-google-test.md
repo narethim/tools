@@ -30,7 +30,28 @@ sudo apt  install libgtest-dev
 
 # build gtest
 cd /usr/src/gtest
-mkdir build
+
+# build gtest
+sudo mkdir build
+cd build
+sudo cmake ..
+sudo make
+
+# Install gtest
+sudo make install
+```
+
+## Install Google Test from GitHub (gtest)
+
+```sh
+mkdir -p ~/projects/GitHub
+cd ~/projects/GitHub
+
+git clone https://github.com/google/googletest.git
+cd googletest
+
+# build gtest
+sudo mkdir build
 cd build
 sudo cmake ..
 sudo make
