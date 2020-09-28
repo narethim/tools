@@ -18,6 +18,16 @@ sudo apt install libcppunit-dev libcppunit-doc
 sudo apt install xsltproc
 ```
 
+For CentOS 8
+
+```sh
+# install CppUnit
+sudo dnf --enablerepo=PowerTools install cppunit-devel
+
+# install libxslt in order to use xsltproc
+sudo dnf install libxslt
+```
+
 ## Example
 
 * [cpp_example_basic_math](https://github.com/narethim/cpp_example_basic_math)
