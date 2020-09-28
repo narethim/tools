@@ -2,7 +2,7 @@
 
 Install Prometheus Node_Exporter v0.18.1 on an x86_64 machine or VM.
 
-# 1. Prepare the environment
+## 1. Prepare the environment
 
 Create a user: node_exporter
 
@@ -10,11 +10,11 @@ Create a user: node_exporter
 sudo useradd --no-create-home --shell /bin/false node_exporter
 ```
 
-# 2. Setup Node Exporter
+## 2. Setup Node Exporter
 
 `Node Exporter` is installed on every node that is to be monitored.
 
-## Install
+### Install
 
 Download the latest version of `Node Exporter`
 
@@ -27,7 +27,7 @@ sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 rm -fr node_exporter-0.18.1.linux-amd64.tar.gz node_exporter-0.18.1.linux-amd64
 ```
 
-## Configure
+### Configure
 
 Configure it to run `Node Exporter` automatically on each boot
 

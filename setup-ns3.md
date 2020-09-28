@@ -2,10 +2,9 @@
 
 Install and build ns-3 version 3.29 using ansible
 
-## 1. Pre-requisite 
+## 1. Pre-requisite
 
 * Ansible is installed on Ansible controller machine
-
 
 ## 2. Install
 

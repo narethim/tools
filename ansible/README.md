@@ -65,7 +65,7 @@ cd $USER/projects/tools/ansible
 ansible-playbook -i inventory playbooks/pb-node-exporter-armv7.yml
 ```
 
-## Run playbooks to un-install 
+## Run playbooks to un-install Node Exporter
 
 node_exporter
 
@@ -79,7 +79,7 @@ ansible-playbook -i inventory playbooks/pb-remove-prometheus-x86_64.yml
 ansible-playbook -i inventory playbooks/pb-remove-grafana-server-x86_64.yml
 ```
 
-### For `arm64` systems (Jetson TX2, Jetson NANO)
+### For `arm64` systems (Jetson TX2, Jetson NANO) Node Exporter
 
 node_exporter
 
@@ -89,7 +89,7 @@ cd $USER/projects/tools/ansible
 ansible-playbook -i inventory playbooks/pb-remove-node-exporter-arm64.yml
 ```
 
-### For `armv7` systems (Raspberry Pi 3 B/B++)
+### For `armv7` systems (Raspberry Pi 3 B/B++) Node Exporter
 
 node_exporter
 
