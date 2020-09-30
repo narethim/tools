@@ -20,6 +20,9 @@ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key 
 
 Use vi editor to open file `/etc/apt/sources.list`
 
+```sh
+sudo vi /etc/apt/sources.list
+```
 add the following line at the end of file:
 
 ```sh
