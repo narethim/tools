@@ -4,6 +4,10 @@
 
 [AWS portal](https://us-west-2.console.aws.amazon.com/console/home?nc2=h_ct&src=header-signin&region=us-west-2)
 
+## Documentation
+
+* [https://docs.aws.amazon.com/index.html](https://docs.aws.amazon.com/index.html)
+
 ## EC2
 
 * [ec2](https://us-west-2.console.aws.amazon.com/ec2/v2/home?region=us-west-2#Home:)
