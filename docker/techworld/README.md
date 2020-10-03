@@ -32,3 +32,8 @@
 
 * [https://dev.to/techworld_with_nana](https://dev.to/techworld_with_nana)
 * [Fed up with theoretical Docker tutorials?](https://dev.to/techworld_with_nana/fed-up-with-theoretical-docker-tutorials-4076)
+
+* [Kubernetes Architecture simply explained](https://dev.to/techworld_with_nana/kubernetes-architecture-simply-explained-4m49)
+* [kubernetes video Series' Articles](https://dev.to/techworld_with_nana/series/4349)
+
+[Techworld with Nana's Series](https://dev.to/techworld_with_nana/series)
