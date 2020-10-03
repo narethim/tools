@@ -21,3 +21,14 @@
 | Tutorial 13    | Deploying the containerized application with Docker Compose | [tutorial-13.md](tutorial-13.md) |
 | Tutorial 14    | Docker Volumes Demo                                         | [tutorial-14.md](tutorial-14.md) |
 | Tutorial 15    | Docker vs Kubernetes vs Docker Swarm                        | [tutorial-15.md](tutorial-15.md) |
+
+## GitLab repos
+
+* [https://gitlab.com/nanuchi](https://gitlab.com/nanuchi)
+* [https://gitlab.com/users/nanuchi/projects](https://gitlab.com/users/nanuchi/projects)
+* [techworld-js-docker-demo-app](https://gitlab.com/nanuchi/techworld-js-docker-demo-app)
+
+## Articles at DEV
+
+* [https://dev.to/techworld_with_nana](https://dev.to/techworld_with_nana)
+* [Fed up with theoretical Docker tutorials?](https://dev.to/techworld_with_nana/fed-up-with-theoretical-docker-tutorials-4076)
