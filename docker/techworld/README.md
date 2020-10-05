@@ -37,3 +37,5 @@
 * [kubernetes video Series' Articles](https://dev.to/techworld_with_nana/series/4349)
 
 [Techworld with Nana's Series](https://dev.to/techworld_with_nana/series)
+
+[prometheus monitoring Series' Articles](https://dev.to/techworld_with_nana/series/7855)
