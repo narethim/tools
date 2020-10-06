@@ -6,11 +6,27 @@
 
 * Install minikube [https://kubernetes.io/docs/tasks/tools/install-minikube/](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 
+Start minikube
+
 ```sh
+# start using default virtualbox
 minikube start
+
+# start using virtualbox explicitly
+minikube start --vm-driver=virtualbox
 ```
 
-## Github Demo:
+Stop minikube
+
+```sh
+# Status
+minikube status
+
+# Stop
+minikube stop
+```
+
+## Github Demo
 
 * [kubernetes-demo](https://github.com/LevelUpEducation/kubernetes-demo)
 
@@ -26,8 +42,7 @@ git clone https://github.com/LevelUpEducation/kubernetes-demo.git
 kubectl get pods
 kubectl get pod
 
-kubectl describe 
-
+kubectl describe <pid id>
 
 kubectl expose deployment tomcat-deployment --type=NodePort
 
@@ -40,17 +55,13 @@ kubectl exec -it "Pod name" bash
 
 [user-guide/kubectl-cheatshee](https://kubernetes.io/docs/user-guide/kubectl-cheatsheet/)
 
-
 Lecture 7: Kubernetes Architecture [link](https://www.youtube.com/)
-
 
 Lecture 8: Scaling  Kubernetes [link](https://www.youtube.com/)
 Lecture 9: Deploying to  Kubernetes [link](https://www.youtube.com/)
-
 
 Lecture 10: Labels [link](https://www.youtube.com/)
 
 Lecture 11: Health Checking [link](https://www.youtube.com/watch?v=3201Gry8_AU&list=PLot-YkcC7wZ9xwMzkzR_EkOrPahSofe5Q&index=11)
 
 Lecture 12: Kubernetes Tutorial [link](https://www.youtube.com/watch?v=gpmerrSpbHg&list=PLot-YkcC7wZ9xwMzkzR_EkOrPahSofe5Q&index=12)
-
