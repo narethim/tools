@@ -11,8 +11,12 @@ YouTube Playlists:
 
 | Name           | Description                                                 | Links                    |
 | -------------- | ----------------------------------------------------------- | -------------------------|
-| Tutorial 7     | Kubernetes YAML File simply explained for Beginners         | [part-07.md](part-07.md) |
-| Tutorial 8     | Complete Guide to setting up your Application using Kubernetes Components | [part-08.md](part-08.md) |
+|  7 | Kubernetes YAML File simply explained for Beginners         | [part-07.md](part-07.md) |
+|  8 | Complete Guide to setting up your Application using Kubernetes Components | [part-08.md](part-08.md) |
+|  9 | Kubernetes Namespaces Explained in 15 mins                  | [part-09.md](part-09.md) |
+| 10 | Kubernetes Ingress Tutorial for Beginners - simply explained| [part-10.md](part-10.md) |
+| 11 | What is Helm in Kubernetes? Helm and Helm Charts explained  | [part-11.md](part-11.md) |
+| 12 | Pods and Containers - Kubernetes Networking - Container Communication inside the Pod | [part-12.md](part-12.md) |
 
 ## GitLab repos
 
