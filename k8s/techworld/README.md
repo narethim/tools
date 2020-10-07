@@ -1,6 +1,11 @@
 # TechWorld tutorial
 
-[Docker Tutorial for Beginners](https://www.youtube.com/playlist?list=PLy7NrYWoggjzfAHlUusx2wuDwfCrmJYcs) Play list
+[kubernetes video Series' Articles](https://dev.to/techworld_with_nana/series/4349)
+
+YouTube Playlists:
+
+* [Complete Kubernetes Tutorial for Beginners](https://www.youtube.com/watch?v=VnvRFRk_51k&list=PLy7NrYWoggjziYQIDorlXjTvvwweTYoNC) Play list
+* [kubernetes Demo](https://www.youtube.com/watch?v=EQNO_kM96Mo&list=PLy7NrYWoggjy3urR5g7BLJiNjLtQcVckT) Play list
 
 ## Notes
 
