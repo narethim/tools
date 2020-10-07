@@ -9,14 +9,17 @@ YouTube Playlists:
 
 ## Notes
 
-| Name           | Description                                                 | Links                    |
-| -------------- | ----------------------------------------------------------- | -------------------------|
-|  7 | Kubernetes YAML File simply explained for Beginners         | [part-07.md](part-07.md) |
-|  8 | Complete Guide to setting up your Application using Kubernetes Components | [part-08.md](part-08.md) |
-|  9 | Kubernetes Namespaces Explained in 15 mins                  | [part-09.md](part-09.md) |
-| 10 | Kubernetes Ingress Tutorial for Beginners - simply explained| [part-10.md](part-10.md) |
-| 11 | What is Helm in Kubernetes? Helm and Helm Charts explained  | [part-11.md](part-11.md) |
+| No.|  Description                                                                         | Links                    |
+| -- | ------------------------------------------------------------------------------------ | -------------------------|
+|  7 | Kubernetes YAML File simply explained for Beginners                                  | [part-07.md](part-07.md) |
+|  8 | Complete Guide to setting up your Application using Kubernetes Components            | [part-08.md](part-08.md) |
+|  9 | Kubernetes Namespaces Explained in 15 mins                                           | [part-09.md](part-09.md) |
+| 10 | Kubernetes Ingress Tutorial for Beginners - simply explained                         | [part-10.md](part-10.md) |
+| 11 | What is Helm in Kubernetes? Helm and Helm Charts explained                           | [part-11.md](part-11.md) |
 | 12 | Pods and Containers - Kubernetes Networking - Container Communication inside the Pod | [part-12.md](part-12.md) |
+| 13 | ConfigMap and Secret as Kubernetes Volumes?!                                         | [part-13.md](part-13.md) |
+| 14 | How to pull image from private Docker Registry in Kubernetes cluster                 | [part-14.md](part-14.md) |
+| 15 | Deployment vs StatefulSet - Kubernetes StatefulSet simply explained                  | [part-15.md](part-15.md) |
 
 ## GitLab repos
 

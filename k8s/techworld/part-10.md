@@ -1,8 +1,8 @@
-# Kubernetes Namespaces Explained in 15 mins
+# Kubernetes Ingress Tutorial for Beginners - simply explained
 
 Articles in DEV (https://dev.to):
 
-* [Kubernetes Namespaces Explained in 15 mins](https://dev.to/techworld_with_nana/kubernetes-namespaces-explained-in-15-mins-12ec)
+* [Kubernetes Ingress Tutorial for Beginners - simply explained](https://dev.to/techworld_with_nana/kubernetes-ingress-tutorial-for-beginners-18a7)
 
 ```sh
 git clone https://gitlab.com/nanuchi/kubernetes-tutorial-series-youtube.git
