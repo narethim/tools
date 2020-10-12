@@ -8,6 +8,20 @@ A quick and simple Ansibe setup:
 
 ## Set up Ansible control machine
 
+### Prerequisite
+
+1. openssh-server
+2. python
+3. sudo NOPASSWD:
+
+```sh
+# Install openssh-server
+sudo apt-get install openssh-server -y
+
+# Install python
+sudo apt-get install python -y
+```
+
 ### Install ansible on Ubuntu 18.04
 
 Latest Releases via Apt (Ubuntu)
