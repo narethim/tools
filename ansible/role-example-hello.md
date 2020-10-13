@@ -71,16 +71,16 @@ It illustrate the use of `import_role` construct.
 - hosts: nodes
   tasks:
     - name: Print a message
-       ansible.builtin.debug:
-         msg: "before we run our role"
+      ansible.builtin.debug:
+        msg: "before we run our role"
 
     - name: Import the role
       import_role:
         name: irixjp.role_example_hello
 
     - name: Print a message
-       ansible.builtin.debug:
-         msg: "after we run our role"
+      ansible.builtin.debug:
+        msg: "after we run our role"
 
     - name: get locale a message
       sample_get_locale:
