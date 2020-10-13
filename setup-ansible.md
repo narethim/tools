@@ -22,6 +22,16 @@ sudo apt-get install openssh-server -y
 sudo apt-get install python -y
 ```
 
+Add sudo NOPASSWD: as follow
+
+sudo visudo
+
+```sh
+# Allow members of group sudo to execute any command
+%sudo  ALL=(ALL:ALL) ALL
+ubuntu ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
 ### Install ansible on Ubuntu 18.04
 
 Latest Releases via Apt (Ubuntu)
@@ -83,6 +93,7 @@ ansible all -m ping
 # Ad-hoc command
 ansible all -a date
 ```
+
 ### Configure ansible to use python3
 
 Ansible is configured to use python version 2.7.xx
@@ -114,7 +125,7 @@ ansible_python_interpreter=/usr/bin/python3
 
 Setup remote systems.
 
-### Prerequisite
+### Prerequisite for remote
 
 1. openssh-server
 2. python
@@ -128,6 +139,16 @@ sudo apt-get install openssh-server -y
 sudo apt-get install python -y
 ```
 
+Add sudo NOPASSWD: as follow
+
+sudo visudo
+
+```sh
+# Allow members of group sudo to execute any command
+%sudo  ALL=(ALL:ALL) ALL
+ubuntu ALL=(ALL:ALL) NOPASSWD: ALL
+```
+
 ## Ansible References
 
 [Documentation](https://docs.ansible.com/ansible/latest/index.html)
@@ -135,8 +156,6 @@ sudo apt-get install python -y
 [Installation Guide](https://docs.ansible.com/ansible/latest/installation_guide/index.html)
 
 [User Guide](https://docs.ansible.com/ansible/latest/user_guide/index.html)
-
-
 
 ### Frequently used Ansible modules
 
