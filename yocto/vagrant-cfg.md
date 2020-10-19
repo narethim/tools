@@ -1,4 +1,8 @@
-# Yocto info
+# Vagrant configuration to meet `yocto` requirement
+
+## Yocto
+
+`Yockto` need at least 50 GB of disk space
 
 ## Increase disk size in VM
 
@@ -13,11 +17,9 @@ vagrant plugin install vagrant-disksize
 Add the following line to the `Vagrantfile` file
 
 ```ruby
-
 vagrant.configure('2') do |config|
-    config.disksize.size = '64GB'
+    config.disksize.size = '50GB'
 end
-
 ```
 
 Check disk space useing `df -h` command
@@ -33,10 +35,3 @@ df -h
 ### Source of info
 
 * [How can I increase disk size on a Vagrant VM?](https://askubuntu.com/questions/317338/how-can-i-increase-disk-size-on-a-vagrant-vm)
-
-## Vagrant examples
-
-* [vagrant-examples/ex-4](https://github.com/narethim/vagrant-examples/ex-4) For Ubuntu
-* [vagrant-examples/ex-41](https://github.com/narethim/vagrant-examples/ex-41) For Ubuntu 18.04 with Ansible provision
-* [vagrant-examples/ex-5](https://github.com/narethim/vagrant-examples/ex-5) For CentOS/7 and CentOS/8
-* [vagrant-examples/ex-6](https://github.com/narethim/vagrant-examples/ex-6) For For Ubuntu with multiple VM instances
