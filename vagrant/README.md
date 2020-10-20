@@ -1,4 +1,4 @@
-# Yocto info
+# Vagrant info
 
 ## Increase disk size in VM
 
@@ -13,11 +13,9 @@ vagrant plugin install vagrant-disksize
 Add the following line to the `Vagrantfile` file
 
 ```ruby
-
 vagrant.configure('2') do |config|
     config.disksize.size = '64GB'
 end
-
 ```
 
 Check disk space useing `df -h` command
@@ -42,5 +40,5 @@ df -h
 
 * [vagrant-examples/ex-4](https://github.com/narethim/vagrant-examples/tree/master/ex-4) - for Ubuntu 16.04
 * [vagrant-examples/ex-41](https://github.com/narethim/vagrant-examples/tree/master/ex-41) - for Ubuntu 18.04 with Ansible provision
-* [vagrant-examples/ex-5](https://github.com/narethim/vagrant-examples/tree/master/ex-5) - for CentOS/7 and CentOS/8
+* [vagrant-examples/ex-5](https://github.com/narethim/vagrant-examples/tree/master/ex-5) - for CentOS/7 and CentOS/8 with Ansible provision
 * [vagrant-examples/ex-6](https://github.com/narethim/vagrant-examples/tree/master/ex-6) - for For Ubuntu with multiple VM instances
