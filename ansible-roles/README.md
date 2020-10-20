@@ -2,7 +2,11 @@
 
 ## Roles
 
-## Molecule
+* [Ansible Role example](role-example.md)
+
+## Ansible Molecule
+
+* [Ansible Molecule example](molecule-example.md)
 
 ### Molecule reference
 
