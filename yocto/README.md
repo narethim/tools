@@ -1,66 +1,46 @@
 # Yocto info
 
-## Yocto
+## Increase disk size in VM
 
-* [Yocto Project Quick Build](https://www.yoctoproject.org/docs/3.1.3/brief-yoctoprojectqs/brief-yoctoprojectqs.html)
+By deafault `vagrant' create a 10 GB VM.
 
-* [https://www.yoctoproject.org/docs/](https://www.yoctoproject.org/docs/)
-
-* [yoctoproject reference manual](https://www.yoctoproject.org/docs/3.1.3/ref-manual/ref-manual.html#detailed-supported-distros)
-
-## Yocto/Vagrant examples
-
-* [vagrant-examples/ex-41](https://github.com/narethim/vagrant-examples/ex-4) For Ubuntu
-
-* [vagrant-examples/ex-5](https://github.com/narethim/vagrant-examples/ex-5) For CentOS/7 and CentOS/8
-
-## Building Your Image¶
+### Install `vagrant-disksize` plugin in host machine
 
 ```sh
-vagrant sh
+vagrant plugin install vagrant-disksize
 ```
 
-```sh
-cd ~/poky
+Add the following line to the `Vagrantfile` file
 
-git fetch --tags
-git tag
-```
+```ruby
 
-For this example, check out the branch based on the yocto-3.1.3 release:
-
-```sh
-cd ~/poky
-
-git checkout tags/yocto-3.1.3 -b my-yocto-3.1.3
-     Switched to a new branch 'my-yocto-3.1.3'
+vagrant.configure('2') do |config|
+    config.disksize.size = '64GB'
+end
 
 ```
 
-### 1. Initialize the Build Environment
+Check disk space useing `df -h` command
 
 ```sh
-cd ~/poky
+vagrant up
 
-source oe-init-build-env
+vagrant ssh
+
+df -h
 ```
 
-### 2. Examine Your Local Configuration File
+### Source of info
 
-When you set up the build environment, a local configuration file named local.conf becomes available in a conf subdirectory of the Build Directory. For this example, the defaults are set to build for a qemux86 target, which is suitable for emulation. The package manager used is set to the RPM package manager.
+* [How can I increase disk size on a Vagrant VM?](https://askubuntu.com/questions/317338/how-can-i-increase-disk-size-on-a-vagrant-vm)
 
-### 3. Start the Build
+## Vagrant examples
 
-```sh
-bitbake core-image-sato
-```
+* [vagrant-examples/ex-1](https://github.com/narethim/vagrant-examples/tree/master/ex-1) - vagrant, ansible roles example
+* [vagrant-examples/ex-2](https://github.com/narethim/vagrant-examples/tree/master/ex-2) - vagrant, simple ansible playbook example
+* [vagrant-examples/ex-3](https://github.com/narethim/vagrant-examples/tree/master/ex-3) - vagrant, ansible playbook, templates example
 
-### 4. Simulate Your Image Using QEMU
-
-```sh
-runqemu qemux86-64
-```
-
-### 5. Exit QEMU
-
-Exit QEMU by either clicking on the shutdown icon or by typing Ctrl-C in the QEMU transcript window from which you evoked QEMU.
+* [vagrant-examples/ex-4](https://github.com/narethim/vagrant-examples/tree/master/ex-4) - for Ubuntu 16.04
+* [vagrant-examples/ex-41](https://github.com/narethim/vagrant-examples/tree/master/ex-41) - for Ubuntu 18.04 with Ansible provision
+* [vagrant-examples/ex-5](https://github.com/narethim/vagrant-examples/tree/master/ex-5) - for CentOS/7 and CentOS/8
+* [vagrant-examples/ex-6](https://github.com/narethim/vagrant-examples/tree/master/ex-6) - for For Ubuntu with multiple VM instances
