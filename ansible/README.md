@@ -1,5 +1,7 @@
 # Ansible playbook usage
 
+![ansible-logo](docs/images/ansible-logo.png)
+
 ## Prerequisite
 
 * Ansible is installed

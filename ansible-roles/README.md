@@ -1,5 +1,7 @@
 # Ansible roles, molecule
 
+![ansible-logo](docs/images/ansible-logo.png)
+
 ## Roles
 
 * [Ansible Role example](role-example.md)
