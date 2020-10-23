@@ -1,8 +1,13 @@
 # Vagrant info
 
+![vagrant-logo](docs/images/vagrant-logo.png)
+
 ## Increase disk size in VM
 
-By deafault `vagrant' create a 10 GB VM.
+Note: Not reliable. Should not use it.
+Should create a Vagrant box image with large disk space (100GB) using packer.
+
+By default `vagrant' create a 10 GB VM.
 
 ### Install `vagrant-disksize` plugin in host machine
 

@@ -3,6 +3,9 @@
 * [Yocto Project Quick Build](https://www.yoctoproject.org/docs/3.1.3/brief-yoctoprojectqs/brief-yoctoprojectqs.html)
 * [https://www.yoctoproject.org/docs/](https://www.yoctoproject.org/docs/)
 
+* [https://bootlin.com/](https://bootlin.com/)
+* [Yocto Project and OpenEmbedded development training](https://bootlin.com/training/yocto/)
+
 ## Increase disk size in VM
 
 ### Install `vagrant-disksize` plugin in host machine
