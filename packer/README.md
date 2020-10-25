@@ -22,7 +22,8 @@ sudo apt-get update && sudo apt-get install packer
 
 ## Getting started
 
-* [boxcutter/ubuntu get-started](boxbutter-ubuntu-getstarted.md)
+* [Jeff Geerling's Vagrant Box Packer Builds](https://github.com/narethim/packer-boxes) - A forked project. It works so far.
+* [boxcutter/ubuntu get-started](boxbutter-ubuntu-getstarted.md) - Not quite working correctly. It's kind of flaky with some of the build.
 
 ## References
 
