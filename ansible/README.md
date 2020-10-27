@@ -15,8 +15,8 @@ vi inventory
 ## Run playbooks to install
 
 ```sh
-mkdir $USER/projects
-cd $USER/projects
+mkdir $HOME/projects
+cd $HOME/projects
 
 git clone https://github.com/narethim/tools.git
 ```
@@ -26,7 +26,7 @@ git clone https://github.com/narethim/tools.git
 node_exporter
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory playbooks/pb-node-exporter-x86_64.yml
 ```
@@ -34,7 +34,7 @@ ansible-playbook -i inventory playbooks/pb-node-exporter-x86_64.yml
 prometheus
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory playbooks/pb-prometheus-x86_64.yml
 ```
@@ -42,7 +42,7 @@ ansible-playbook -i inventory playbooks/pb-prometheus-x86_64.yml
 grafana
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory pb-install-grafana-server-x86_64.yml
 ```
@@ -52,7 +52,7 @@ ansible-playbook -i inventory pb-install-grafana-server-x86_64.yml
 node_exporter
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory playbooks/pb-node-exporter-arm64.yml
 ```
@@ -62,7 +62,7 @@ ansible-playbook -i inventory playbooks/pb-node-exporter-arm64.yml
 node_exporter
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory playbooks/pb-node-exporter-armv7.yml
 ```
@@ -72,7 +72,7 @@ ansible-playbook -i inventory playbooks/pb-node-exporter-armv7.yml
 node_exporter
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory playbooks/pb-remove-node-exporter-x86_64.yml
 
@@ -86,7 +86,7 @@ ansible-playbook -i inventory playbooks/pb-remove-grafana-server-x86_64.yml
 node_exporter
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory playbooks/pb-remove-node-exporter-arm64.yml
 ```
@@ -96,7 +96,7 @@ ansible-playbook -i inventory playbooks/pb-remove-node-exporter-arm64.yml
 node_exporter
 
 ```sh
-cd $USER/projects/tools/ansible
+cd $HOME/projects/tools/ansible
 
 ansible-playbook -i inventory playbooks/pb-remove-node-exporter-armv7.yml
 ```
