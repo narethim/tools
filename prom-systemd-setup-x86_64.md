@@ -2,7 +2,7 @@
 
 Install Prometheus Node_Exporter v0.18.1 and Prometheus Server v2.10.0 on an x86_64 machine or VM.
 
-# 1. Prepare the environment
+## 1. Prepare the environment
 
 Create 2 users: prometheus and node_exporter
 
@@ -18,11 +18,11 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 
 ```
 
-# 2. Setup Node Exporter
+## 2. Setup Node Exporter
 
 `Node Exporter` is installed on every node that is to be monitored.
 
-## Install
+### Install
 
 Download the latest version of `Node Exporter`
 
@@ -35,7 +35,7 @@ sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 rm -fr node_exporter-0.18.1.linux-amd64.tar.gz node_exporter-0.18.1.linux-amd64
 ```
 
-## Configure
+### Configure
 
 Configure it to run `Node Exporter` automatically on each boot
 
@@ -81,9 +81,9 @@ Verify that it works correctly.
 
 [http://localhost:9100/metrics](http://localhost:9100/metrics)
 
-# 3. Setup Prometheus server
+## 3. Setup Prometheus server
 
-## Install
+### Install
 
 Download the latest version of Prometheus
 
@@ -106,7 +106,7 @@ sudo chown -R prometheus:prometheus /etc/prometheus/consoles
 sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 ```
 
-## Configure Prometheus
+### Configure Prometheus
 
 `sudo vi /etc/prometheus/prometheus.yml`
 
@@ -159,7 +159,7 @@ If everything is working enable `Node Exporter` to be started on each boot.
 sudo systemctl enable prometheus
 ```
 
-# 4. Prometheus web interface
+## 4. Prometheus web interface
 
 [http://localhost:9090](http://localhost:9090)
 
@@ -176,5 +176,5 @@ Try the following metrics:
 
 Click on `Execute` then select `Graph` tab.
 
-# 5. References
+## 5. References
 [Configure a Prometeus Monitoring Server with a Grafana Dashboard](https://www.scaleway.com/en/docs/configure-prometheus-monitoring-with-grafana)

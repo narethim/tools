@@ -1,6 +1,5 @@
 ---
-- hosts: test_nodes
-  remote_user: ubuntu
+- hosts: control_node
   become: yes
  
   tasks:
@@ -90,4 +89,3 @@
     systemd:
       name: prometheus
       enabled: yes
-      

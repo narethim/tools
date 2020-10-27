@@ -1,6 +1,5 @@
 ---
-- hosts: optiplex_nodes
-  remote_user: nim
+- hosts: all_nodes
   become: yes
  
   tasks:

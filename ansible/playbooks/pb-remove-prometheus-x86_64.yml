@@ -1,0 +1,30 @@
+---
+- hosts: control_node
+  become: yes
+ 
+  tasks:
+
+  # systemd disable service `prometheus`
+  - name: Disable service prometheus, and not touch the state
+    systemd:
+      name: prometheus
+      enabled: no
+
+  # systemd stop service `prometheus`
+  - name: Stop service prometheus
+    systemd:
+      name: prometheus
+      state: stopped
+
+  # Remove service file
+  - name: "Delete file /etc/systemd/system/prometheus.service"
+    file:
+      path: "/etc/systemd/system/prometheus.service"
+      state: absent
+
+  # Delete user 'prometheus'
+  - name: Delete the user 'prometheus' 
+    user:
+      name: prometheus
+      comment: prometheus
+      state: absent

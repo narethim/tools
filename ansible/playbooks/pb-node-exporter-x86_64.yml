@@ -1,8 +1,5 @@
 ---
-- hosts: optiplex_nodes
-#- hosts: example
-#- hosts: nodes
-  remote_user: "{{ ansible_ssh_user }}"
+- hosts: all_nodes
   become: yes
  
   tasks:

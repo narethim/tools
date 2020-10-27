@@ -1,8 +1,7 @@
 ---
       
 # Alternative play
-- hosts: web
-#  remote_user: nim
+- hosts: all
   tasks:
   - name: test connection with 'ping' module
     ping:

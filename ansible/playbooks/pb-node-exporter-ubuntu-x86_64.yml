@@ -1,12 +1,14 @@
 ---
-- hosts: test-nodes
+- hosts: test_nodes
   remote_user: "{{ ansible_ssh_user }}"
-  become: yes
+  become_user: "{{ ansible_ssh_user }}"
+  become: true
  
   tasks:
 
   # Create user 'node_exporter'
   - name: Add the user 'node_exporter' with no home dir and no shell
+    become: true
     user:
       name: node_exporter
       comment: node_exporter

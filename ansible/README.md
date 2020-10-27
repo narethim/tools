@@ -44,7 +44,7 @@ grafana
 ```sh
 cd $HOME/projects/tools/ansible
 
-ansible-playbook -i inventory pb-install-grafana-server-x86_64.yml
+ansible-playbook -i inventory playbooks/pb-install-grafana-server-x86_64.yml
 ```
 
 ### For `arm64` systems (Jetson TX2, Jetson NANO)

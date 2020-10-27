@@ -1,6 +1,6 @@
 ---
-- hosts: web
-  remote_user: nim
+- name: Playbook test web
+  hosts: all
   tasks:
     # test connection
     - ping: 
@@ -8,8 +8,10 @@
     - debug: var=ansible_distribution
 
 # Alternative play
-- hosts: web_server
-  remote_user: ubuntu
+- name: Playbook test web_server
+  hosts: all
+#  remote_user: nareth
+  become: true
   tasks:
     - name: test connection with 'ping' module
       ping:
@@ -17,3 +19,14 @@
     - name: debug 'var=ansible_distribution'
       debug: var=ansible_distribution
 
+    - name: Install curl
+      apt:
+        name: 
+          - curl
+          - wget
+        state: present
+      register: pkg_result
+
+    - name: Display pkg_result.
+      debug:
+        var: pkg_result.stdout

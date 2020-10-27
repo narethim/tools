@@ -1,6 +1,5 @@
 ---
-- hosts: test_node
-  remote_user: ubuntu
+- hosts: control_node
   become: yes
  
   tasks:
@@ -21,4 +20,3 @@
     systemd:
       name: grafana-server
       enabled: yes
-
