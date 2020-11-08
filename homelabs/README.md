@@ -9,7 +9,7 @@
 
 * Dell Poweredge R620
   * [Dell PowerEdge R620 Server E5-2660 2.20Ghz 16-Core 64GB 2X 600GB H310 (Renewed)](https://www.amazon.com/gp/product/B07RFN9DL4/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
-
+  * [Dell_PowerEdge_R620_Spec_Sheet.pdf](Dell_PowerEdge_R620_Spec_Sheet.pdf)
 
 ## 2. Software
 
