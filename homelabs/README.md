@@ -19,7 +19,12 @@
 * [vSphere Hypervisor - Installation & Configuration
 Install and Configure a vSphere Host](https://www.vmware.com/products/vsphere-hypervisor.html)
 
-### 2.2 TrueNAS Core 12.0 (formerly FreeNAS)
+### 2.2 PROXMOX
+
+* [Proxmox Virtual Environment](https://www.proxmox.com/en/proxmox-ve)
+* [Proxmox](https://www.proxmox.com/en/)
+
+### 2.3 TrueNAS Core 12.0 (formerly FreeNAS)
 
 ### Documentation
 
