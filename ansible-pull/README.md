@@ -31,6 +31,20 @@ git config --global user.name "Nareth Im"
 sudo ansible-pull -U https://github.com/narethim/ansible_pull_example.git
 ```
 
+Verify user `ansible` is created:
+
+```sh
+ls -l /home
+
+cat /etc/passwd
+```
+
+Verify cron job for user `ansible`:
+
+```sh
+sudo crontab -u ansible -l
+```
+
 ## Reference
 
 * [https://github.com/jlacroix82/ansible_pull_tutorial](https://github.com/jlacroix82/ansible_pull_tutorial) at GitHub
