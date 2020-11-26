@@ -1,5 +1,35 @@
 # ansible-pull example
 
+## Setup
+
+```sh
+sudo apt update
+sudo apt install -y git
+sudo apt install -y ansible
+```
+
+It's a good idea to create an ssh-key as well: 
+
+```sh
+ssh-keygen
+```
+
+```sh
+git clone https://github.com/narethim/ansible_pull_example.git
+```
+
+Setup global git configuration:
+
+```sh
+git config --global user.email "narethi@yaoo.com"
+git config --global user.name "Nareth Im"
+```
+
+## Usage
+
+```sh
+sudo ansible-pull -U https://github.com/narethim/ansible_pull_example.git
+```
 
 ## Reference
 
