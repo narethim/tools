@@ -35,7 +35,28 @@ Replace host_ip with actual ip address: 192.168.0.xxx
 /home               client_ip(rw,sync,no_root_squash,no_subtree_check)
 ```
 
+example:
+
+```sh
+/var/nfs/general    192.168.0.115(rw,sync,no_subtree_check)
+/home               192.168.0.115(rw,sync,no_root_squash,no_subtree_check)
+```
+
+Restart service
+
+```sh
+# restart service
+sudo systemctl restart nfs-kernel-server
+
+# verify
+sudo systemctl status nfs-kernel-server
+```
+
 Step 4 — Adjusting the Firewall on the Host (if activated)
+
+```sh
+sudo ufw status
+```
 
 ## 2 Client setup
 
@@ -62,6 +83,15 @@ sudo mount host_ip:/home /nfs/home
 df -h
 ```
 
+Example:
+
+```sh
+sudo mount 192.168.0.180:/var/nfs/general /nfs/general
+sudo mount 192.168.0.180:/home /nfs/home
+
+df -h
+```
+
 Step 6 - Testing NFS Access
 
 ```sh
@@ -83,6 +113,13 @@ Replace host_ip with actual ip address: 192.168.0.xxx
 ```sh
 host_ip:/var/nfs/general    /nfs/general   nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
 host_ip:/home               /nfs/home      nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
+```
+
+Example:
+
+```sh
+192.168.0.180:/var/nfs/general    /nfs/general   nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
+192.168.0.180:/home               /nfs/home      nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
 ```
 
 Step 8 - Unmounting an NFS Remote Share
