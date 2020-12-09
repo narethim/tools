@@ -19,9 +19,22 @@ Create `bamboo` user
 sudo /usr/sbin/useradd --create-home --home-dir /usr/local/bamboo --shell /bin/bash bamboo
 ```
 
+## Start `bamboo` web application
+
+```sh
+cd atlassian/atlassian-bamboo-7.2.1/
+
+./bin/start-bamboo.sh
+```
+
 ## Web access
 
 [http://localhost:8085/.](http://localhost:8085/.)
+
+```sh
+login: nim
+pwd: ***
+```
 
 ## References
 
