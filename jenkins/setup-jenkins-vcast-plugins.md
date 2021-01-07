@@ -29,6 +29,23 @@ Description: bitbucket-imnare-username-password
 OK
 ```
 
+## Setup `Configure System` environment variables
+
+From Jenkins menu select `Manage Jenkins`
+Select `System Configuration` > `Configure System`
+
+Scroll down to `Global proprties` section
+
+[x] Environment variables
+
+```html
+Name: VECTOR_LICENSE_FILE
+Value: 56065@emslm1
+
+Name: VECTORCAST_DIR
+Value: /usr/local/vcast
+```
+
 ## `VectorCAST` Plugins
 
 From the Dashboard select `VectorCAST`
