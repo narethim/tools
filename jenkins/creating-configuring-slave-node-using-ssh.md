@@ -14,7 +14,7 @@
 ### Slave node
 
 * Need openssh-server installed
-* OpenJDK 8 or newer
+* OpenJDK 8 or newer. ( sudo yum install java-1.8.0-openjdk-devel, yum list available \*openjdk\* )
 * ~/jenkins directory
 
 ## Cofigure node
