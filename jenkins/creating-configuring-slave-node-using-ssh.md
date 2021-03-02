@@ -17,6 +17,14 @@
 * OpenJDK 8 or newer. ( sudo yum install java-1.8.0-openjdk-devel, yum list available \*openjdk\* )
 * ~/jenkins directory
 
+```sh
+sudo -i
+subcription-manager unregister
+subcription-manager clean
+yum clean all
+yum install java-1.8.0-openjdk-devel
+```
+
 ## Cofigure node
 
 Manage Jenkins > Manage Nodes and Clouds > New Node
