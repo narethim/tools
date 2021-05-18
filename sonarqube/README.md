@@ -4,6 +4,10 @@
 
 Use this [link](sonarqube-container.md) to install using Docker container.
 
+## SonarLint
+
+* SonarLint for Eclipse [GitHub Wiki page](https://github.com/SonarSource/sonarlint-eclipse/wiki)
+
 ## Resources
 
 * [SonarQube Documentation](https://docs.sonarqube.org/latest/)

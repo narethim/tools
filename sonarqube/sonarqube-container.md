@@ -35,3 +35,5 @@ docker run -d -p 9000:9000 -v sonarqube_conf:/opt/sonarqube/conf -v sonarqube_ex
 ## Resources
 
 * [SonarQube on Docker | Setup SonarQube for Code Coverage, Vulnerabilities scan, Static Code Analysis](https://www.youtube.com/watch?v=ZAfMauwNFuQ&list=PLVx1qovxj-akoYTAboxT1AbHlPmrvRYYZ&index=13)
+
+* [DevOps | SonarQube Integration With Jenkins | SonarQube Scanner For Jenkins | Thetips4you](https://www.youtube.com/watch?v=tbr_PeAGdfo&list=PLVx1qovxj-akoYTAboxT1AbHlPmrvRYYZ&index=10) - Example [example-1](example-1.md)
