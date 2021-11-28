@@ -32,7 +32,7 @@
   # Copy file prometheus to /usr/local/bin/prometheus
   - name: Copy file with owner and permissions
     copy:
-      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus"
+      src: "{{ control_base_path }}/tmp/prometheus-2.31.1.linux-amd64/prometheus"
       dest: /usr/local/bin/prometheus
       owner: prometheus
       group: prometheus
@@ -40,7 +40,7 @@
   # Copy file prometheus to /usr/local/bin/prometheus
   - name: Copy file with owner and permissions
     copy:
-      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/promtool"
+      src: "{{ control_base_path }}/tmp/prometheus-2.31.1.linux-amd64/promtool"
       dest: /usr/local/bin/promtool
       owner: prometheus
       group: prometheus
@@ -49,7 +49,7 @@
   # Copy dir consoles to /etc/prometheus/consoles
   - name: Copy dir consoles to /etc/prometheus/consoles
     copy:
-      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/consoles"
+      src: "{{ control_base_path }}/tmp/prometheus-2.31.1.linux-amd64/consoles"
       dest: /etc/prometheus/consoles
       directory_mode:
       owner: prometheus
@@ -57,7 +57,7 @@
   # Copy dir consoles_libraries to /etc/prometheus/consoles_libraries
   - name: Copy dir consoles_libraries to /etc/prometheus/console_libraries
     copy:
-      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/console_libraries"
+      src: "{{ control_base_path }}/tmp/prometheus-2.31.1.linux-amd64/console_libraries"
       dest: /etc/prometheus/consoles_libraries
       directory_mode:
       owner: prometheus
@@ -66,7 +66,7 @@
   # Copy file prometheus.yml to /etc/prometheus/prometheus.yml
   - name: Copy file with owner and permissions
     copy:
-      src: "{{  control_base_path }}/tmp/prometheus-2.10.0.linux-amd64/prometheus.yml"
+      src: "{{ control_base_path }}/tmp/prometheus-2.31.1.linux-amd64/prometheus.yml"
       dest: /etc/prometheus/prometheus.yml
       owner: prometheus
       group: prometheus
