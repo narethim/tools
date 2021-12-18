@@ -38,18 +38,34 @@ cd myexample
 Create a `makefile` using the following content
 
 ```sh
-CC = gcc
-CFLAGS = -Wall -Wextra -I$(CURDIR) -g
+CCC = gcc
+#CFLAGS = -Wall -Wextra -I$(CURDIR) -g
+CFLAGS = -Wall -I$(CURDIR) -g
+OBJ = foo.o bar.o main.o
 
-main: main.o foo.o
-	$(CC) $(LDFLAGS) -o $@ $^ -pthread ${OBJ} -lprom -lpromhttp -lmicrohttpd
+all: example
+
+main.o:	main.c
+	$(CC) -o main.o $(CFLAGS) -c main.c
+
+foo.o:	foo.c
+	$(CC) -o foo.o  $(CFLAGS) -c foo.c
+
+bar.o:	bar.c
+	$(CC) -o bar.o $(CFLAGS) -c bar.c
+
+example: main.o foo.o bar.o
+	$(CC) $(LDFLAGS) -o example main.o foo.o bar.o -pthread -lprom -lpromhttp -lmicrohttpd
+
+clean:
+	rm example *.o
 ```
 
 Build it
 ```sh
 make
 
-./main
+./example
 ```
 
 ## View it from Firefox
