@@ -38,8 +38,7 @@ cd myexample
 Create a `makefile` using the following content
 
 ```sh
-CCC = gcc
-#CFLAGS = -Wall -Wextra -I$(CURDIR) -g
+CC = gcc
 CFLAGS = -Wall -I$(CURDIR) -g
 OBJ = foo.o bar.o main.o
 
