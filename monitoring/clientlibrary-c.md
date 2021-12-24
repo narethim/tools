@@ -8,7 +8,7 @@
 
 Clone prometheus-client-c
 
-Note: as of 2021-12-18 there is a bug due to old go1.13.1 issue
+Note: as of 2021-12-18 there is a bug due to old `go1.13.1` issue. Replace with `go1.16.7` version.
 
 ```sh
 make
@@ -24,6 +24,9 @@ sudo dpkg -i libprom-dev-0.1.3-Linux.deb
 
 cd promhttp/
 sudo dpkg -i libpromhttp-dev-0.1.3-Linux.deb
+
+# Install microhttpd library
+sudo apt install libmicrohttpd-dev
 ```
 
 ## Build and run example
