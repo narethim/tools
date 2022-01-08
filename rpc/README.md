@@ -6,7 +6,7 @@
 
 ```sh
 # Go to example directory
-cd tutorials/step6
+cd tutorial/step6
 
 # Save files to temp names
 mv add_client.c add_client.cc
