@@ -32,3 +32,14 @@ rpcinfo -p 192.168.0.131
 ./add_client 192.168.0.131 1 2
 3
 ```
+
+## Changes needed on remote node which has firewall active
+
+```sh
+sudo firewall-cmd --permanent --add-service=rpc-bind
+
+# Open the ports for RPC ADD_PROG  0x23451111 = 591728913
+sudo firewall-cmd --permanent --add-port=36049/udp
+sudo firewall-cmd --permanent --add-port=50044/tcp
+sudo firewall-cmd --reload
+```

@@ -13,6 +13,7 @@ mv add_client.c add_client.cc
 mv add_server.c add_server.cc
 
 # Generate code
+cp ../add.x .
 rpcgen -a -C add.x
 
 # Overwrite generated code with our code
