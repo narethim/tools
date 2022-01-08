@@ -8,6 +8,17 @@
 # Go to example directory
 cd tutorials/step6
 
+# Save files to temp names
+mv add_client.c add_client.cc
+mv add_server.c add_server.cc
+
+# Generate code
+rpcgen -a -C add.x
+
+# Overwrite generated code with our code
+mv add_client.cc add_client.c
+mv add_server.cc add_server.c
+
 # Compile
 make
 
