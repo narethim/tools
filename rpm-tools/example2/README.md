@@ -1,6 +1,6 @@
 # cello example2
 
-* Follow example [How to create a Linux RPM package](https://www.redhat.com/sysadmin/create-rpm-package)
+* Follow example [RPM Packaging Guide](https://rpm-packaging-guide.github.io/)
 
 ## Prerequisite
 
@@ -19,6 +19,9 @@ cd ~/projects
 git clone https://github.com/narethim/tools.git
 
 ln -s ~/projects/tools/rpm-tools/example2 ~/rpmbuild
+
+cd ~/rpmbuild
+mkdir BUILD BUILDROOT RPMS SRPMS
 
 cd ~
 ```
