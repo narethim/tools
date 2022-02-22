@@ -21,7 +21,8 @@ git clone https://github.com/narethim/tools.git
 ln -s ~/projects/tools/rpm-tools/example2 ~/rpmbuild
 
 cd ~/rpmbuild
-mkdir BUILD BUILDROOT RPMS SRPMS
+
+rpmdev-setuptree
 
 cd ~
 ```
