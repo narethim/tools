@@ -55,6 +55,20 @@ rpmbuild -bs ~/rpmbuild/SPECS/cello.spec
 Wrote: /home/centos/rpmbuild/SRPMS/cello-1.0-1.el7.src.rpm
 
 [centos@localhost rpmbuild]$ tree
+[centos@localhost rpmbuild]$ tree
+.
+├── BUILD
+├── BUILDROOT
+├── README.md
+├── RPMS
+├── SOURCES
+│   └── cello-1.0.tar.gz
+├── SPECS
+│   └── cello.spec
+└── SRPMS
+    └── cello-1.0-1.el7.src.rpm
+
+6 directories, 4 files
 
 ```
 
@@ -64,18 +78,67 @@ Wrote: /home/centos/rpmbuild/SRPMS/cello-1.0-1.el7.src.rpm
 
 ```sh
 rpmbuild -bb ~/rpmbuild/SPECS/cello.spec
+
+[centos@localhost rpmbuild]$ tree
+.
+├── BUILD
+│   └── cello-1.0
+│       ├── cello
+│       ├── cello.c
+│       ├── debugfiles.list
+│       ├── debuglinks.list
+│       ├── debugsources.list
+│       ├── elfbins.list
+│       ├── LICENSE
+│       └── Makefile
+├── BUILDROOT
+├── README.md
+├── RPMS
+│   └── x86_64
+│       ├── cello-1.0-1.el7.x86_64.rpm
+│       └── cello-debuginfo-1.0-1.el7.x86_64.rpm
+├── SOURCES
+│   └── cello-1.0.tar.gz
+├── SPECS
+│   └── cello.spec
+└── SRPMS
+    └── cello-1.0-1.el7.src.rpm
+
+8 directories, 14 files
+
 ```
 
 * Rebuilding from a Source RPM
 
 ```sh
 rpmbuild --rebuild ~/rpmbuild/SRPMS/cello-1.0-1.el7.src.rpm
+
+[centos@localhost rpmbuild]$ tree
+.
+├── BUILD
+├── BUILDROOT
+├── README.md
+├── RPMS
+│   └── x86_64
+│       ├── cello-1.0-1.el7.x86_64.rpm
+│       └── cello-debuginfo-1.0-1.el7.x86_64.rpm
+├── SOURCES
+├── SPECS
+└── SRPMS
+    └── cello-1.0-1.el7.src.rpm
+
+7 directories, 4 files
+
 ```
 
 ### Step 3 - Install rpm
 
 ```sh
 sudo yum install ~/rpmbuild/RPMS/x86_64/cello-1.0-1.el7.x86_64.rpm
+
+# Run cello
+cello
+Hello World
 ```
 
 To verify the package has correctly been installed, run the following command:
