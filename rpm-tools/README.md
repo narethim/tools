@@ -11,3 +11,4 @@
 
 * [The final rpm packaging guide](https://janikvonrotz.ch/2019/03/20/the-final-rpm-packaging-guide/)
 * [How to create an rpm package - LINUXCONFIG.org](https://linuxconfig.org/how-to-create-an-rpm-package)
+* [Maximum RPM](https://ftp.osuosl.org/pub/rpm/max-rpm/index.html)
