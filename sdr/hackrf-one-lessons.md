@@ -18,3 +18,8 @@ Playlist [SDR with HackRF One](https://www.youtube.com/watch?v=zNUCiGVJQo0&list=
 * [Lesson 10 - Filters](https://www.youtube.com/watch?v=0csVDUKod9U)
 * [Lesson 11 - Replay](https://www.youtube.com/watch?v=DbuQsq4QjR4)
 
+HACKADAY
+
+* [Michael Ossmann: Simple RF Circuit Design](https://www.youtube.com/watch?v=TnRn3Kn_aXg&t=677s)
+
+* Playlist [Antenna Basics](https://www.youtube.com/watch?v=dMUyRPdZK5w&list=PL_tws4AXg7authztKFg5ZN5qWGtq3N_nI) 6 videos

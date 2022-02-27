@@ -12,19 +12,17 @@
 
 * [Mike Seguin, N1JEZ - The LimeSDR and LimeMicro](https://www.youtube.com/watch?v=F76BzezuCmw&t=893s) 51:26 long
 
-
 ### Frugal Radio
+
 Playlist [2020/2021 SDR Guide](https://www.youtube.com/watch?v=RWeWALpmtQQ&list=PLe5ZKeM2hRBJ2G_Gvt1JnBxqtjHMMej3q)
 
 * [Filters 101 : Improving reception with your SDR or radio - a look at RF filters](https://www.youtube.com/watch?v=FdMrqwVpYg8)
-
 
 ### Misc
 
 Black Hat
 
 * [Hacking the Wireless World with Software Defined Radio - 2.0](https://www.youtube.com/watch?v=N0p3_ES2dBU&t=394s) 1:02:18
-
 
 OWASP Foundation
 
@@ -46,7 +44,6 @@ DevMiser
 hakology
 
 * [Hakology - SDR, Introduction to gqrx](https://www.youtube.com/watch?v=SNPVcYIdbD0&t=494s)
-
 
 SignalsEverywhere
 
