@@ -48,3 +48,10 @@ hakology
 SignalsEverywhere
 
 * [Spectrum Analyzer and Tracking Generator with Pluto SDR](https://www.youtube.com/watch?v=p901fuqrrJo&t=322s)
+
+### sdrforengineers
+
+* [https://sdrforengineers.github.io/](https://sdrforengineers.github.io/)
+* Book pdf [Software-Defined Radio for Engineers](https://www.analog.com/en/education/education-library/software-defined-radio-for-engineers.html)
+* Book [Software-Defined Radio for Engineers Illustrated Edition](https://www.amazon.com/Software-defined-Radio-Engineers-Travis-Collins/dp/1630814571)
+* GitHub [SDR For Engineers](https://github.com/sdrforengineers)
