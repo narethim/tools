@@ -36,7 +36,7 @@ A Software Defined Radio info page
 
 [Amateur Radio – PEØSAT](https://www.pe0sat.vgnet.nl/)
 
-- [IQ Data Explained](https://www.pe0sat.vgnet.nl/sdr/iq-data-explained/)
+* [IQ Data Explained](https://www.pe0sat.vgnet.nl/sdr/iq-data-explained/)
 
 ## YouTube
 
