@@ -47,3 +47,8 @@ A Software Defined Radio info page
 * [ADS-B using dump1090 for the Raspberry Pi](http://www.satsignal.eu/raspberry-pi/dump1090.html)
 
 * [The 1090 Megahertz Riddle (second edition)](https://mode-s.org/decode/misc/ack.html)
+
+## GQRX SDR
+
+* [Welcome to gqrx](https://gqrx.dk/)
+* [Practical tricks and tips](https://gqrx.dk/doc/practical-tricks-and-tips#more-229)
