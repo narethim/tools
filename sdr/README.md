@@ -41,8 +41,8 @@ A Software Defined Radio info page
 ## YouTube
 
 * [DIY sonar scanner (practical experiments)](https://www.youtube.com/watch?v=z4uxC7ISd-c) and github content [https://github.com/bitluni/SonarScannerV1], [bitluni](https://github.com/bitluni)
-* [Radar Tutorial by Pentek](https://youtu.be/bU_ABeCdWYs) - Vary good introduction to Radar
-* [Software Radio Basics by Pentek](https://youtu.be/BK9QkHxeYQI) - Vary good introduction to SDR basic
+* [Radar Tutorial by Pentek](https://youtu.be/bU_ABeCdWYs) - Very good introduction to Radar
+* [Software Radio Basics by Pentek](https://youtu.be/BK9QkHxeYQI) - Very good introduction to SDR basic
 
 ## Articles about ADS-B
 
