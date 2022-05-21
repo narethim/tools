@@ -6,8 +6,8 @@ Download latest version from [https://cmake.org/download/](https://cmake.org/dow
 
 Example:
 
-- cmake-3.22.4-linux-x86_64.sh
-- cmake-3.22.4-linux-x86_64.tar.gz
+- cmake-3.23.1-linux-x86_64.sh
+- cmake-3.23.1-linux-x86_64.tar.gz
 
 ```sh
 cd ~/Downloads
