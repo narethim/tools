@@ -26,5 +26,15 @@ CMake suite maintained and supported by Kitware (kitware.com/cmake).
 
 ## Tutorial
 
-- [https://cmake.org/cmake/help/latest/guide/tutorial/index.html](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
-- Source code in GitHub [https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial](https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial)
+- [https://cmake.org/cmake/help/latest/guide/tutorial/index.html](https://cmake.org/cmake)
+- CMake Source code in GitHub [https://github.com/Kitware/CMake](https://github.com/Kitware/CMake)
+
+- CMake tutorial [https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial](https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial)
+
+Example:
+
+```sh
+git clone https://github.com/Kitware/CMake.git
+
+cd CMake/Help/guide/tutorial
+```
