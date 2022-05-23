@@ -6,7 +6,7 @@
 
     -- [CPack for Windows Installer NSIS](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Packaging%20With%20CPack.html#cpack-for-windows-installer-nsis) See the details here.
 
-    -- [CPack for Debian Packages](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Packaging%20With%20CPack.html#cpack-for-rpm)
+    -- [CPack for Debian Packages](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Packaging%20With%20CPack.html#cpack-for-debian-packages)
 
     -- [CPack for RPM](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Packaging%20With%20CPack.html#cpack-for-rpm)
 
