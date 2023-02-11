@@ -9,8 +9,8 @@
 |  [3.2 Computer Hardware](https://www.youtube.com/watch?v=NaXZqulP3vc&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=3) |
 |  [3.3 Computer Software](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=4) |
 
-| Chapter 4: The MSP430                     |
-| ----------------------------------------- |
+| Chapter 4: The MSP430 |
+| --------------------- |
 |  [4.1 - MSP430 Hardware Overview](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=5) |
 |  [4.2 - MSP430 Software Overview](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=6) |
 |  [4.3(a) - MSP430 LaunchAad Development Kit](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=7) |
@@ -34,7 +34,7 @@
 |  [6.7 - MSP430 MOV Instruction using Indexed Mode Addressing](https://www.youtube.com/watch?v=0TSkGBGpdZE&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=19)  |
 
 | Chapter 7: Data Manipulation Instructions |
-| -------- |
+| ----------------------------------------- |
 | [7.1(a) - MSP430 Arithmetic Instructions (ADD)](https://www.youtube.com/watch?v=9BrqxMLiiwk&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=20)  |
 | [7.1(b) - MSP430 Arithmetic Instructions (ADDC)](https://www.youtube.com/watch?v=RDpmbJXWfBs&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=21)  |
 | [7.1(c) - MSP430 Arithmetic Instructions (SUB)](https://www.youtube.com/watch?v=kMX_9XHvNTA&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=22)  |
@@ -46,7 +46,7 @@
 | [7.5 - MSP430 Rotate Instructions (RLA, RRA, RLC, RRC)](https://www.youtube.com/watch?v=ql5RPCdOWvc&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=28)  |
 
 | Chapter 8: Program Flow Instructions |
-| -------- |
+| ------------------------------------ |
 | [8.1(a) - MSP430 Program Flow Instructions - Jump/Branch Overview](https://www.youtube.com/watch?v=BFlHOmQk8dw&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=29)  |
 | [8.1(b) - MSP430 Program Flow Instructions - Jump/Branch Overview]()  |
 | [8.2(a) - MSP430 Program Flow Instructions - Jump/Branch Overview]()  |
@@ -103,7 +103,7 @@
 | [13.1(e) - Switching to C to Program the MSP430 - Switch/Case Statements](https://www.youtube.com/watch?v=nbLuh_1e7Ig&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=69)  |
 | [13.1(f) - Switching to C to Program the MSP430 - Arithmetic](https://www.youtube.com/watch?v=7KMy0lgxZhI&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=70&t=2s)  |
 | [13.1(g) - Switching to C to Program the MSP430 - Bitwise Logic Operations](https://www.youtube.com/watch?v=KZs5eT5XDGU&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=71)  |
-
+| |
 | [13.2(a) - Switching to C to Program the MSP430 - Digital Outputs](https://www.youtube.com/watch?v=phxF_q44G1Y&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=72)  |
 | [13.2(b) - Switching to C to Program the MSP430 - Digital Inputs & Polling](https://www.youtube.com/watch?v=_6tTvj_D2UA&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=73)  |
 | |
@@ -117,8 +117,8 @@
 | [13.4(f) - Switching to C to Program the MSP430 - ]()  |
 | [13.4(g) - Switching to C to Program the MSP430 - ]()  |
 
-| Chapter 14: Serial Communication |
-| -------- |
+| Chapter 14: Serial Communication on the MSP430 |
+| ---------------------------------------------- |
 | [14.1(a) - Serial Communication on the MSP430: The UART - Serial Com Overview](https://www.youtube.com/watch?v=p_YOsh7BSDE&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=82)  |
 | [14.1(b) - Serial Communication on the MSP430: The UART - ]()  |
 | [14.1(c) - Serial Communication on the MSP430: The UART - ]()  |
@@ -151,8 +151,8 @@
 | [14.3(j) - Serial Communication on the MSP430: I2C - ]()  |
 | [14.3(k) - Serial Communication on the MSP430: I2C - ]()  |
 
-| Chapter 15: Analog to Digital |
-| -------- |
+| Chapter 15: Analog to Digital Converter on the MSP430 |
+| ----------------------------------------------------- |
 | [15.1 - Analog-to-Digital Converter on the MSP430: Overview of ADCs](https://www.youtube.com/watch?v=ZwThTeZnTEk&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=111)  |
 | [15.2(a) - Analog-to-Digital Converter on the MSP430: The MSP430 ADC & Configuration](https://www.youtube.com/watch?v=l__XaxTco6I&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=112)  |
 | [15.2(b) - Analog-to-Digital Converter on the MSP430: Reading Voltage w/ Conversion-Complete Polling](https://www.youtube.com/watch?v=HH9DO22BxU4&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=113)  |
