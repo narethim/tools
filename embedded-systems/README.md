@@ -40,6 +40,12 @@
 * [Interrupts - Play list](https://www.youtube.com/playlist?list=PLRJhV4hUhIykXo5vsDoufPCujEDr6xZvC)
 * [Startup code - Play list](https://www.youtube.com/playlist?list=PLRJhV4hUhIyk5i7OSoHBHXLTyI61lJTII)
 
+* [Embedded Systems with ARM Cortex-M Microcontrollers - in Assembly Language and C (Fourth Edition)](https://web.eece.maine.edu/~zhu/book/) By Dr Yifeng Zhu
+* [Tutorials](https://web.eece.maine.edu/~zhu/book/tutorials.php) By Dr Yifeng Zhu
+* [Sample Lab](https://web.eece.maine.edu/~zhu/book/lab.php) By Dr Yifeng Zhu
+* [Lab Kit](https://web.eece.maine.edu/~zhu/book/kit.php) By Dr Yifeng Zhu
+
+
 #### Quantum Leaps, LLC
 
 * [Embedded Systems Programming Course - Play list](https://www.youtube.com/playlist?list=PLfcIZXsDLA1-QEyrD4R9YcWWKpbCcrGVP)
