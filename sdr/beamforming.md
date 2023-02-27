@@ -16,7 +16,7 @@
 
 * [What is 5G beamforming, beam steering and beam switching with massive MIMO](https://www.metaswitch.com/knowledge-center/reference/what-is-beamforming-beam-steering-and-beam-switching-with-massive-mimo) by metaswitch
 
-* [How 5G Works: Understanding the Difference Between Beamsteering and Beamforming](https://www.metaswitch.com/knowledge-center/reference/what-is-beamforming-beam-steering-and-beam-switching-with-massive-mimo) by Keysight
+* [How 5G Works: Understanding the Difference Between Beamsteering and Beamforming](https://blogs.keysight.com/blogs/inds.entry.html/2020/08/31/how_5g_works_thedi-E9uz.html) by Keysight
 
 YouTube
 
