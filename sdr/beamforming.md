@@ -22,5 +22,8 @@ YouTube
 
 * [Phased Array Beamforming: Understanding and Prototyping](https://www.youtube.com/watch?v=0hnWfTvETcU) GNU Radio by Jon Kraft from Analog Device
 * [A Detailed Introduction to Beamforming](https://youtu.be/HKpQP8H4JRc)
-* [An Intuitive Introduction to Beamforming](https://youtu.be/lH5nqLfNVCA)
+* [An Intuitive Introduction to Beamforming](https://www.youtube.com/watch?v=lH5nqLfNVCA)
+* [An Introduction to 3D Beamforming](https://youtu.be/lH5nqLfNVCA)
+  * [Beam Steering 12:28](https://www.youtube.com/watch?v=lH5nqLfNVCA)
+
 * [Massive MIMO and Beam Forming](https://youtu.be/Pa1Y_6FwmAg)
