@@ -28,7 +28,7 @@
 
 #### Micro Peta by Nazar Mohideen
 
-* [STM32F103C8T6 - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_P_RV5HJfVLYniii4qZYcp4)
+* [STM32F103C8T6 - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_P_RV5HJfVLYniii4qZYcp4) with project description at [link](http://micropeta.com)
 * [STM32F446RE-NUCLEO - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_MTOh7YAXhdjD4uYUccUexo)
 * [Ebyte LoRa - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_PK2jJ2kD2Wt24SHHP9hosk)
 * [SIM7600 - MQTT - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_PK2jJ2kD2Wt24SHHP9hosk)
