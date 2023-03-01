@@ -33,7 +33,7 @@
 * [Ebyte LoRa - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_PK2jJ2kD2Wt24SHHP9hosk)
 * [SIM7600 - MQTT - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_PK2jJ2kD2Wt24SHHP9hosk)
 
-#### Embedded Systems and Deep Learning
+#### Embedded Systems and Deep Learning by Dr Yifeng Zhu using NUCLEO-L476RG
 
 * [STM32L4 Tutorial and Demo - Play list](https://www.youtube.com/playlist?list=PLRJhV4hUhIykPKCPWDCD2ctS9OE3zlnXB)
 * [Short Lectures - Play list](https://www.youtube.com/playlist?list=PLRJhV4hUhIymmp5CCeIFPyxbknsdcXCc8)
@@ -44,7 +44,6 @@
 * [Tutorials](https://web.eece.maine.edu/~zhu/book/tutorials.php) By Dr Yifeng Zhu
 * [Sample Lab](https://web.eece.maine.edu/~zhu/book/lab.php) By Dr Yifeng Zhu
 * [Lab Kit](https://web.eece.maine.edu/~zhu/book/kit.php) By Dr Yifeng Zhu
-
 
 #### Quantum Leaps, LLC
 
