@@ -19,3 +19,9 @@
 * [STM32F446RE-NUCLEO - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_MTOh7YAXhdjD4uYUccUexo)
 * [Ebyte LoRa - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_PK2jJ2kD2Wt24SHHP9hosk)
 * [SIM7600 - MQTT - Play list](https://www.youtube.com/playlist?list=PL5e8EBlOu5_PK2jJ2kD2Wt24SHHP9hosk)
+
+### Bare Metal Embedded Programming: Theory and Practice Using STM32 By `Gene Schroeder Tech` - Very good content
+
+* [Bare Metal Embedded Programming: Theory and Practice Using STM32](https://www.youtube.com/playlist?list=PL4cGeWgaBTe155QQSQ72DksLIjBn5Jn2Z)
+* [GitHub Link to mcu-class-1-code](https://github.com/g-schro/mcu-class-1-code) repository
+* [GitHub Link to mcu-class-1-external-docs](https://github.com/g-schro/mcu-class-1-external-docs) repository
