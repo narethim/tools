@@ -49,3 +49,22 @@
 | #21 Foreground-Background Architecture ("Superloop")  | [#21](https://www.youtube.com/watch?v=AoLLKbvEY8Q) |
 | #22 RTOS Part-1: What is a Real-Time Operating System?              | [#22](https://www.youtube.com/watch?v=TEq3-p0GWGI) |
 | #23 RTOS Part-2: Automating the context switch                   | [#23](https://www.youtube.com/watch?v=PKml9ki3178&t=8s) |
+
+### Bare metal embedded By `Fastbit Embedded Brain Academy` - Very good content
+
+* [Bare metal embedded (7 videos) - Playlist](https://www.youtube.com/playlist?list=PLERTijJOmYrDiiWd10iRHY0VRHdJwUH4g)
+
+| Name                 | Link |
+| -------------------- | ---- |
+| lecture-1: Build process                                    | [lecture-1](https://www.youtube.com/watch?v=qWqlkCLmZoE&t=2s) |
+| lecture-2: Makefile and analyzing relocatable obj file      | [lecture-2](https://www.youtube.com/watch?v=Bsq6P1B8JqI) |
+| lecture-3: Writing MCU startup file from scratch            | [lecture-3](https://www.youtube.com/watch?v=2Hm8eEHsgls&t=3s) |
+| lecture-4: Writing linker scripts and section placement     | [lecture-4](https://www.youtube.com/watch?v=B7oKdUvRhQQ) |
+| lecture-5: Linking and analyzing memory map file            | [lecture-5](https://www.youtube.com/watch?v=5aafG5mjZ_Y) |
+| lecture-6: Downloading and debugging executable             | [lecture-6](https://www.youtube.com/watch?v=4RjEmcT6JpM) |
+| lecture-7: Integrating 'C' standard library and semihosting | [lecture-7](https://www.youtube.com/watch?v=AzYC5hO2uJk) |
+
+* [RTC and LCD interfacing with STM32 (14 videos) - Playlist](https://www.youtube.com/playlist?list=PLERTijJOmYrDiiWd10iRHY0VRHdJwUH4g)
+
+* [Microcontroller Programming : STM32 (29 videos) - Playlist](https://www.youtube.com/playlist?list=PLERTijJOmYrA6iGZaWGyEJXpjzY0lRTC3)
+* [MCU1 old videos (25 videos) - Playlist](https://www.youtube.com/playlist?list=PLERTijJOmYrAjWPn3ZwWF-n6TAp0WWBbq)
