@@ -6,6 +6,7 @@
 ## STM32 Refrences
 
 * [STM32 32-bit Arm Cortex MCUs](https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html)
+* [STM32 Software Development Tools](https://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools.html)
 
 ## Refrences
 
@@ -68,3 +69,18 @@
 
 * [Microcontroller Programming : STM32 (29 videos) - Playlist](https://www.youtube.com/playlist?list=PLERTijJOmYrA6iGZaWGyEJXpjzY0lRTC3)
 * [MCU1 old videos (25 videos) - Playlist](https://www.youtube.com/playlist?list=PLERTijJOmYrAjWPn3ZwWF-n6TAp0WWBbq)
+
+### New ARM Tutorial Series By `BuildYourCNC` - Very good content
+
+* [New ARM Tutorial Series (17 videos) - Playlist](https://www.youtube.com/playlist?list=PL6PplMTH29SEJhWqxhxkDKYPtw0C4mnNY)
+
+| Name                 | Link |
+| -------------------- | ---- |
+| New ARM Microcontroller Programming and Circuit Building Series | [Video-1](https://www.youtube.com/watch?v=ftjQ6YelAXE&t=2s) |
+| Setting Up the Prototyping Environment      | [Video-2](https://www.youtube.com/watch?v=Bsq6P1B8JqI) |
+| Installing the IDE and Monitoring Software  | [Video-3](https://www.youtube.com/watch?v=Y5012XpqHmw) |
+| USART Communication Part 1                  | [Video-4](https://www.youtube.com/watch?v=lOD4KcQ8mpY&t=2s) |
+| The 4 Basics to Control ALL!!               | [Video-5](https://www.youtube.com/watch?v=GjzO1Iq64hw&t=1502s) |
+| I BRICKED My ARM Microcontroller (how to fix)    | [Video-6](https://www.youtube.com/watch?v=20fUiiUJerE) |
+| Changing the Clock to 48Mhz Using the GNU Library | [Video-7](https://www.youtube.com/watch?v=20fUiiUJerE) |
+| Change the Internal Clock speed! (automated and manual approach) | [Video-8](https://www.youtube.com/watch?v=hNogrcE-wSI&t=7s) |
