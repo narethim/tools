@@ -1,6 +1,6 @@
-# NUCLEO-446RE
+# NUCLEO-F446RE
 
-## NUCLEO-446RE Info
+## NUCLEO-F446RE Info
 
 * arm mbed [NUCLEO-F446RE](https://os.mbed.com/platforms/ST-Nucleo-F446RE/)
 
