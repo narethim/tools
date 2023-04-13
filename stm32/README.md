@@ -84,3 +84,13 @@
 | I BRICKED My ARM Microcontroller (how to fix)    | [Video-6](https://www.youtube.com/watch?v=20fUiiUJerE) |
 | Changing the Clock to 48Mhz Using the GNU Library | [Video-7](https://www.youtube.com/watch?v=20fUiiUJerE) |
 | Change the Internal Clock speed! (automated and manual approach) | [Video-8](https://www.youtube.com/watch?v=hNogrcE-wSI&t=7s) |
+
+* [STM32 Tutorial (39 videos) - Playlist](https://www.youtube.com/playlist?list=PLmY3zqJJdVeNIZ8z_yw7Db9ej3FVG0iLy) by `Eddie Amaya`
+
+| Name                 | Link |
+| -------------------- | ---- |
+| Stm32 Peripheral Drivers from Scartch : GPIO Programming Part 1 | [Video-3](https://www.youtube.com/watch?v=S0UFT-YTrZw&list=PLmY3zqJJdVeNIZ8z_yw7Db9ej3FVG0iLy&index=3&t=68s) |
+| Stm32 Peripheral Drivers from Scartch : GPIO Programming Part 2 | [Video-4](https://www.youtube.com/watch?v=2R7xVfU0YBg&list=PLmY3zqJJdVeNIZ8z_yw7Db9ej3FVG0iLy&index=4) |
+| Stm32 Peripheral Drivers from Scartch : GPIO Programming Part 2: Continued | [Video-7](https://www.youtube.com/watch?v=TYaPB7HNTwE&list=PLmY3zqJJdVeNIZ8z_yw7Db9ej3FVG0iLy&index=7) |
+| Stm32 Peripheral Drivers from Scartch : GPIO Programming Part 3 | [Video-5](https://www.youtube.com/watch?v=fH5hhw1tVRo&list=PLmY3zqJJdVeNIZ8z_yw7Db9ej3FVG0iLy&index=6) |
+| Stm32 Peripheral Drivers from Scartch : GPIO Programming Part 4 | [Video-6](https://www.youtube.com/watch?v=w4UZmvXwsrs&list=PLmY3zqJJdVeNIZ8z_yw7Db9ej3FVG0iLy&index=5) |
