@@ -11,10 +11,10 @@
 
 | Chapter 4: The MSP430 |
 | --------------------- |
-|  [4.1 - MSP430 Hardware Overview](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=5) |
-|  [4.2 - MSP430 Software Overview](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=6) |
-|  [4.3(a) - MSP430 LaunchAad Development Kit](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=7) |
-|  [4.3(b) - MSP430FR2355 Documentation](https://www.youtube.com/watch?v=E9f5fHlEl5s&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=8) |
+|  [4.1 - MSP430 Hardware Overview](https://www.youtube.com/watch?v=cHyIz3Tksho&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=5) |
+|  [4.2 - MSP430 Software Overview](https://www.youtube.com/watch?v=4Hl2YBCYmRo&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=6) |
+|  [4.3(a) - MSP430 LaunchAad Development Kit](https://www.youtube.com/watch?v=eT8uQDtKv2w&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=7) |
+|  [4.3(b) - MSP430FR2355 Documentation](https://www.youtube.com/watch?v=sClbXZZ8hHE&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm&index=8) |
 
 | Chapter 5: Getting Started Programming the MSP430 in Assembly |
 | ------------------------------------------------------------- |

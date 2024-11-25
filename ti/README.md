@@ -10,4 +10,5 @@
 
 ## Refrences
 
+* [Intro to Embedded Systems Design w/ MSP430FR2355 (textbook videos) - Play list Page](./Embedded-system-design.md)
 * [Intro to Embedded Systems Design w/ MSP430FR2355 (textbook videos) - Play list](https://www.youtube.com/watch?v=KfFBEBN5UHU&list=PL643xA3Ie_EuHoNV7AgvJXq-z1hrE8vsm)
