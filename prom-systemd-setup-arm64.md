@@ -1,8 +1,8 @@
 # Setup Prometheus
 
-Install Prometheus Node_Exporter v0.18.1 and Prometheus Server v2.10.0 on an arm64 machine such as NVIDIA Jetson TX2, Nano or VM.
+Install Prometheus Node_Exporter v1.8.2 and Prometheus Server v2.10.0 on an arm64 machine such as NVIDIA Jetson TX2, Nano or VM.
 
-# 1. Prepare the environment
+## 1. Prepare the environment
 
 Create 2 users: prometheus and node_exporter
 
@@ -18,7 +18,7 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 
 ```
 
-# 2. Setup Node Exporter
+## 2. Setup Node Exporter
 
 `Node Exporter` is installed on every node that is to be monitored.
 
@@ -27,12 +27,12 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 Download the latest version of `Node Exporter`
 
 ```sh
-wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-arm64.tar.gz
-tar zxvf node_exporter-0.18.1.linux-arm64.tar.gz
-sudo cp node_exporter-0.18.1.linux-arm64/node_exporter /usr/local/bin
+wget https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-arm64.tar.gz
+tar zxvf node_exporter-1.8.2.linux-arm64.tar.gz
+sudo cp node_exporter-1.8.2.linux-arm64/node_exporter /usr/local/bin
 sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
-rm -fr node_exporter-0.18.1.linux-arm64.tar.gz node_exporter-0.18.1.linux-arm64
+rm -fr node_exporter-1.8.2.linux-arm64.tar.gz node_exporter-1.8.2.linux-arm64
 ```
 
 ## Configure

@@ -1,6 +1,6 @@
 # Setup Prometheus
 
-Install Prometheus Node_Exporter v0.18.1 on an armv7 machine such as Raspberry Pi 3 Version B/B+.
+Install Prometheus Node_Exporter v1.8.2 on an armv7 machine such as Raspberry Pi 3 Version B/B+.
 
 ## 1. Prepare the environment
 
@@ -19,12 +19,12 @@ sudo useradd --no-create-home --shell /bin/false node_exporter
 Download the latest version of `Node Exporter`
 
 ```sh
-wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-armv7.tar.gz
-tar zxvf node_exporter-0.18.1.linux-armv7.tar.gz
-sudo cp node_exporter-0.18.1.linux-armv7/node_exporter /usr/local/bin
+wget https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-armv7.tar.gz
+tar zxvf node_exporter-1.8.2.linux-armv7.tar.gz
+sudo cp node_exporter-1.8.2.linux-armv7/node_exporter /usr/local/bin
 sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
-rm -fr node_exporter-0.18.1.linux-armv7.tar.gz node_exporter-0.18.1.linux-armv7
+rm -fr node_exporter-1.8.2.linux-armv7.tar.gz node_exporter-1.8.2.linux-armv7
 ```
 
 ### Configure

@@ -49,6 +49,7 @@ Import the following dashboards:
 | 1860 | Node Exporter Full           | Single node       |       |
 |  405 | Node Exporter Server Metrics | Multiple nodes    |       |
 | 9894 | Node Exporter 0.16           | Single node       | Need Pie-chart plugin |
+| 14731| Linux Stats with Node Exporter | Single node     |       |
 
 Importing a dashboard example:
 

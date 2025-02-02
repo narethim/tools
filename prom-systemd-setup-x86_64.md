@@ -1,6 +1,6 @@
 # Setup Prometheus
 
-Install Prometheus Node_Exporter v0.18.1 and Prometheus Server v2.10.0 on an x86_64 machine or VM.
+Install Prometheus Node_Exporter v1.8.2 and Prometheus Server v3.1.0 on an x86_64 machine or VM.
 
 ## 1. Prepare the environment
 
@@ -22,17 +22,17 @@ sudo chown prometheus:prometheus /var/lib/prometheus
 
 `Node Exporter` is installed on every node that is to be monitored.
 
-### Install
+### Install Node Exporter
 
 Download the latest version of `Node Exporter`
 
 ```sh
-wget https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
-tar zxvf node_exporter-0.18.1.linux-amd64.tar.gz
-sudo cp node_exporter-0.18.1.linux-amd64/node_exporter /usr/local/bin
+wget https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz
+tar zxvf node_exporter-1.8.2.linux-amd64.tar.gz
+sudo cp node_exporter-1.8.2.linux-amd64/node_exporter /usr/local/bin
 sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
 
-rm -fr node_exporter-0.18.1.linux-amd64.tar.gz node_exporter-0.18.1.linux-amd64
+rm -fr node_exporter-1.8.2.linux-amd64.tar.gz node_exporter-1.8.2.linux-amd64
 ```
 
 ### Configure
@@ -83,23 +83,23 @@ Verify that it works correctly.
 
 ## 3. Setup Prometheus server
 
-### Install
+### Install Prometheus server
 
 Download the latest version of Prometheus
 
 ```sh
-wget https://github.com/prometheus/prometheus/releases/download/v2.10.0/prometheus-2.10.0.linux-amd64.tar.gz
-tar zxvf prometheus-2.10.0.linux-amd64.tar.gz
+wget https://github.com/prometheus/prometheus/releases/download/v3.1.0/prometheus-3.1.0.linux-amd64.tar.gz
+tar zxvf prometheus-3.1.0.linux-amd64.tar.gz
 
-sudo cp prometheus-2.10.0.linux-amd64/prometheus /usr/local/bin
-sudo cp prometheus-2.10.0.linux-amd64/promtool /usr/local/bin
+sudo cp prometheus-3.1.0.linux-amd64/prometheus /usr/local/bin
+sudo cp prometheus-3.1.0.linux-amd64/promtool /usr/local/bin
 
 sudo chown prometheus:prometheus /usr/local/bin/prometheus
 sudo chown prometheus:prometheus /usr/local/bin/promtool
 
-sudo cp  prometheus-2.10.0.linux-amd64/prometheus.yml /etc/prometheus
-sudo cp -r prometheus-2.10.0.linux-amd64/consoles /etc/prometheus
-sudo cp -r prometheus-2.10.0.linux-amd64/console_libraries /etc/prometheus
+sudo cp  prometheus-3.1.0.linux-amd64/prometheus.yml /etc/prometheus
+sudo cp -r prometheus-3.1.0.linux-amd64/consoles /etc/prometheus
+sudo cp -r prometheus-3.1.0.linux-amd64/console_libraries /etc/prometheus
 
 sudo chown prometheus:prometheus /etc/prometheus/prometheus.yml
 sudo chown -R prometheus:prometheus /etc/prometheus/consoles
