@@ -90,7 +90,7 @@ New SMB password: smbnim789
 
 Map
 
-\\192.168.50.4\pool_dset01
+\\\\192.168.50.4\pool_dset01
 
 ### Cleanup
 
