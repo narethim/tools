@@ -36,7 +36,15 @@ terraform plan
 terraform apply -auto-approve
 ```
 
-### 3. Cleanup
+### 3. Verification
+
+```sh
+ssh homelab@192.168.50.90
+ssh homelab@192.168.50.91
+ssh homelab@192.168.50.92
+```
+
+### 4. Cleanup
 
 ```sh
 terraform destroy -auto-approve
