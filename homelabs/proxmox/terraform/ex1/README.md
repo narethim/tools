@@ -38,8 +38,8 @@ terraform apply -auto-approve
 ### 3. Verification
 
 ```sh
-ssh homelab@192.168.50.201
-ssh homelab@192.168.50.202
+ssh user@192.168.50.201
+ssh user@192.168.50.202
 ```
 
 ### 4. Cleanup
