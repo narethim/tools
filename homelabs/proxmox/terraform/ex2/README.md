@@ -7,7 +7,7 @@
 
 ## Setup Instructions
 
-### 1. Confugure Terraform Variables
+### 1. Configure Terraform Variables
 
 Create a `terraform.tfvars` file with your Proxmox credentials and settings:
 
