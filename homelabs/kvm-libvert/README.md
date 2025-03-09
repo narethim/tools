@@ -2,7 +2,8 @@
 
 ## Installation
 
-* [KVM setup](https://low-orbit.net/kvm-lab-setup)
+* [KVM setup](https://low-orbit.net/kvm-lab-setup) by low-orbit
+* [How Do I Properly Install KVM on Linux](https://sysguides.com/install-kvm-on-linux) by SysGuide
 
 ## Instructions
 
