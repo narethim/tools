@@ -12,7 +12,7 @@ terraform {
 }
 
 provider "proxmox" {
-  pm_api_url          = "https://192.168.50.176:8006/api2/json" #  TODO: Proxmox host
+  pm_api_url          = "https://192.168.50.177:8006/api2/json" #  TODO: Proxmox host
   pm_api_token_id     = "root@pam!terraform"                    #  TODO: Get from Proxmox
   pm_api_token_secret = "xxxx"  #  TODO: Get from Proxmox
   pm_tls_insecure     = true
@@ -46,13 +46,12 @@ resource "proxmox_vm_qemu" "test2" {
   }
 
   os_type   = "cloud-init"
-  ipconfig0 = "ip=192.168.50.90/24,gw=192.168.50.90"
+  ipconfig0 = "ip=192.168.50.90/24,gw=192.168.50.1"
   sshkeys   = "xxxx" # TODO: cat ~/.ssh/id_rsa.pub from terraform control VM machine
 
   ciuser       = "homelab"            # or your template's default user
   nameserver   = "8.8.8.8"            # google dns
-  #searchdomain = "vermillion.local"  # local domain
-
+  
   automatic_reboot = true
 
   lifecycle {
