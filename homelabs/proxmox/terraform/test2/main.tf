@@ -22,6 +22,7 @@ resource "proxmox_vm_qemu" "test2" {
   name        = "test2"
   target_node = "pve2"                # TODO: Change to your Proxmox node name
   clone       = "ubuntu2204-template" # TODO: Change to your template name
+  agent = 1                           # <-- (Optional) Enable QEMU Guest Agent
 
   cores  = 2
   memory = 2048
