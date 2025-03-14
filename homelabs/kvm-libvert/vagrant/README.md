@@ -15,6 +15,8 @@ vagrant up
 vagrant up --provision
 ```
 
-## Vagrant Proxmox
+## Examples from `theurbanpenguin`
 
-* [Use Vagrant to manage Proxmox virtual machines](https://github.com/telcat/vagrant-proxmox)
+* [Vagrant Libvirt Plugin to Manage KVM Virtual Machines on Ubuntu Linux](https://www.youtube.com/watch?v=PywnhhboKyQ)
+
+* [Howto Provision Vagrant Virtual Machines with Ansible](https://www.youtube.com/watch?v=V6jujUTkJJ8) using VirtualBox
