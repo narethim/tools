@@ -29,6 +29,8 @@ sudo apt-get update && sudo apt-get install packer
 
 * [https://www.packer.io/](https://www.packer.io/)
 
+* [] [Hashi Corp Packer - The Basics](https://www.youtube.com/playlist?list=PL8VzFQ8k4U1Jp6eWgHSXHiiRWRvPyCKRj) Playbon on YouTube.
+
 ## Packer examples
 
 * [boxcutter/ubuntu](https://github.com/boxcutter/ubuntu) - Packer templates for Ubuntu - packer usage examples
