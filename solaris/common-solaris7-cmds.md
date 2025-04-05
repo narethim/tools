@@ -21,6 +21,22 @@ logins -x -l user3
 passwd user3
 ```
 
+## Networking
+
+```sh
+ifconfif le0
+
+# List route table
+netstat -r
+netstat -rn
+
+# List statistics on all interfaces on system
+netstat -i
+
+# Ping a host continuously
+ping -s google.com
+```
+
 ## References
 
 * [Get online with Solaris 7 x86 (SUN OS 5.7) in 2023](https://www.youtube.com/watch?v=JQdqY_m1W5Q)
