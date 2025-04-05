@@ -15,9 +15,9 @@
 
 Solaris 7
 
-| Component   | Value                 | Note         |
+| Host        | User                  | Pwd          |
 | ----------- | --------------------- | :----------: |
-| aladdin     | root                  |          |
+| aladdin     | root                  |              |
 
 ## SparcStation 5 - roger
 
@@ -34,7 +34,7 @@ Solaris 7
 
 Solaris 7
 
-| Component   | Value                 | Note         |
+| Host        | User                  | Pwd          |
 | ----------- | --------------------- | :----------: |
 | roger       | root                  | Testing123   |
 
@@ -85,3 +85,5 @@ ok probe-scsi
 ok 0 f 0 do i idprom@ xor loop f mkp
 reset
 ```
+
+Note: This method is not working. `mkpl` doesnot working as expected
