@@ -20,10 +20,7 @@ OS Version: Solaris 7
 
 | Component   | Value                 | Note         |
 | ----------- | --------------------- | :----------: |
-<<<<<<< HEAD
 | CPU         | Sun Microsystems microSPARC 85 MHz     |              |
-=======
->>>>>>> 6e373752644e319736dec21352cb8da236be1b4b
 | RAM         | 64 MB                 |              |
 | HDD         | IBM 2.1 GB            |              |
 | Floppy Disk |                       |              |
