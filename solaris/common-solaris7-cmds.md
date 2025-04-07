@@ -24,7 +24,7 @@ passwd user3
 ## Networking
 
 ```sh
-ifconfif le0
+ifconfig le0
 
 # List route table
 netstat -r
@@ -35,6 +35,14 @@ netstat -i
 
 # Ping a host continuously
 ping -s google.com
+```
+
+## CPU Info
+
+```sh
+psrinfo -v
+
+df -k
 ```
 
 ## References
