@@ -6,7 +6,7 @@
 | ----------------------- | --------------------- | :----------: |
 | Sun NVRAM Repair - EP 6 | [link](https://www.youtube.com/watch?v=k4QPBCS7BL8) | 863FD1   |
 
-![images](images/idprom.png)
+![images](images/idprom.PNG)
 
 ```sh
 ok set-defaults
