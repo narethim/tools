@@ -38,7 +38,7 @@ Temporary reset commands
 8 0 20 13 de ad c0 ff ee
 ```
 
-```sh
+```forth
 ok set-defaults
 ok setenv diag-switch? false
 ok 1  0 mkp
@@ -62,7 +62,7 @@ reset
 
 Alternative method using MAC address: `8 0 20 72 fb 8e` and hostid: `72fb8e`
 
-```sh
+```forth
 ok set-defaults
 ok setenv diag-switch? false
 ok 1  0 mkp
@@ -76,7 +76,7 @@ Note: Reference YouTube video [Sun NVRAM Dead Battery Fix (idprom Contents Inval
 
 ## OBP command
 
-```sh
+```forth
 ok probe-scsi
 
 ok printenv boot-device
