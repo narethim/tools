@@ -29,3 +29,17 @@ ok d1 e mkp
 ok 0 f 0 do i idprom@ xor loop f mkp
 reset
 ```
+
+## Method 2
+
+Alternative method using MAC address: `8 0 20 86 3f d1` and hostid: `863fd1`
+
+```sh
+ok set-defaults
+ok setenv diag-switch? false
+ok 1  0 mkp
+ok real-machine-type 1 mkp
+ok 8 0 20 86 3f d1 863fd1 mkpl <return> <ctrl-d> <ctrl-r>
+ok .idprom
+ok reset
+```
