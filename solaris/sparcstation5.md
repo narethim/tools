@@ -4,33 +4,27 @@
 
 | Component   | Value                 | Note         |
 | ----------- | --------------------- | :----------: |
-| CPU         | Sun Microsystems microSPARC 85 MHz     |              |
+| CPU         | Sun Microsystems microSPARC 85 MHz |              |
 | RAM         | 32 MB                 |              |
 | HDD         | Conner 1.00 GB        |              |
-| Floppy Disk |                       |              |
+| Floppy Disk | 3.5" Floppy disk      |              |
 | IDPROM      | 758CCD                |              |
-
-OS Version: Solaris 7
-
-| Host        | User                  | Pwd          |
-| ----------- | --------------------- | :----------: |
-| aladdin     | root                  |              |
+| OS          | Solaris 7             |              |
+| Hostname    | aladdin               |              |
+| User        | root                  | pwd: none    |
 
 ## SparcStation 5 - roger
 
 | Component   | Value                 | Note         |
 | ----------- | --------------------- | :----------: |
-| CPU         | Sun Microsystems microSPARC 85 MHz     |              |
+| CPU         | Sun Microsystems microSPARC 85 MHz |              |
 | RAM         | 64 MB                 |              |
 | HDD         | IBM 2.1 GB            |              |
-| Floppy Disk |                       |              |
+| Floppy Disk | 3.5" Floppy disk      |              |
 | IDPROM      |                       |              |
-
-OS Version: Solaris 7
-
-| Host        | User                  | Pwd          |
-| ----------- | --------------------- | :----------: |
-| roger       | root                  | Testing123   |
+| OS          | Solaris 7             |              |
+| Hostname    | aladdin               |              |
+| User        | root                  | pwd: Testing123 |
 
 ### Set IDPROM
 
