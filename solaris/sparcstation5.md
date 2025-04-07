@@ -2,18 +2,14 @@
 
 ## SparcStation 5 - aladdin
 
-### HW
-
 | Component   | Value                 | Note         |
 | ----------- | --------------------- | :----------: |
 | RAM         | 32 MB                 |              |
-| HDD         | Conner 2.00 GB        |              |
+| HDD         | Conner 1.00 GB        |              |
 | Floppy Disk |                       |              |
 | IDPROM      | 758CCD                |              |
 
-### SW
-
-Solaris 7
+OS Version: Solaris 7
 
 | Host        | User                  | Pwd          |
 | ----------- | --------------------- | :----------: |
@@ -21,18 +17,14 @@ Solaris 7
 
 ## SparcStation 5 - roger
 
-### HW roger
-
 | Component   | Value                 | Note         |
 | ----------- | --------------------- | :----------: |
-| RAM         | 32 MB                 |              |
+| RAM         | 64 MB                 |              |
 | HDD         | IBM 2.1 GB            |              |
 | Floppy Disk |                       |              |
 | IDPROM      |                       |              |
 
-### SW roger
-
-Solaris 7
+OS Version: Solaris 7
 
 | Host        | User                  | Pwd          |
 | ----------- | --------------------- | :----------: |
@@ -72,7 +64,7 @@ ok 0 f 0 do i idprom@ xor loop f mkp
 reset
 ```
 
-Alternative method using MAC `8 0 20 72 fb 8e` and hostid `72fb8e`
+Alternative method using MAC address: `8 0 20 72 fb 8e` and hostid: `72fb8e`
 
 ```sh
 ok set-defaults
@@ -81,9 +73,21 @@ ok 1  0 mkp
 ok real-machine-type 1 mkp
 ok 8 0 20 72 fb 8e 72fb8e mkpl <return> <ctrl-d> <ctrl-r>
 ok .idprom
-ok probe-scsi
+
 ok 0 f 0 do i idprom@ xor loop f mkp
 reset
 ```
 
-Note: This method is not working. `mkpl` doesnot working as expected
+Note: Reference YouTube video [Sun NVRAM Dead Battery Fix (idprom Contents Invalid)](https://www.youtube.com/watch?v=3lP4rXua1Lo)
+
+## OBP command
+
+```sh
+ok probe-scsi
+
+ok printenv boot-device
+```
+
+## References
+
+* [nvram-idprom-reset](nvram-idprom-reset.md)
