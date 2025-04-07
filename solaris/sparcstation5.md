@@ -79,7 +79,7 @@ ok set-defaults
 ok setenv diag-switch? false
 ok 1  0 mkp
 ok real-machine-type 1 mkp
-ok 8 0 20 72 fb 8e 72fb8e mkpl
+ok 8 0 20 72 fb 8e 72fb8e mkpl <return> <ctrl-d> <ctrl-r>
 ok .idprom
 ok probe-scsi
 ok 0 f 0 do i idprom@ xor loop f mkp
