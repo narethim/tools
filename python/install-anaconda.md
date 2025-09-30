@@ -1,5 +1,23 @@
 # Anaconda
 
+## Miniconda Info
+
+### Creating environments
+
+```sh
+conda create -n <env-name>
+
+conda create -n myenvironment python numpy pandas
+```
+
+### Listing environments
+
+```sh
+conda info --envs
+```
+
+## Anaconda Info
+
 - Go into (base) virtual environment
 
 ```sh
@@ -28,3 +46,9 @@ conda list
 # envs
 conda env list
 ```
+
+## Documentation
+
+- [Conda Documentation](https://docs.conda.io/en/latest/)
+- [Getting started with conda](https://docs.conda.io/projects/conda/en/stable/user-guide/getting-started.html)
+- [Cheatsheet](https://docs.conda.io/projects/conda/en/stable/user-guide/cheatsheet.html)
