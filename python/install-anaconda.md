@@ -14,6 +14,14 @@ conda create -n myenvironment python numpy pandas
 
 ```sh
 conda info --envs
+# or
+conda env list
+```
+
+### Deleting environment
+
+```sh
+conda env remove -n <env-name>
 ```
 
 ## Anaconda Info
