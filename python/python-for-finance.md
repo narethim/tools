@@ -7,7 +7,7 @@
 
 ## Python For Finance free YouTube Courses
 
-* [Python For Finance free YouTube Courses](https://www.youtube.com/playlist?list=PLdtqDMvm2lvTASUE94XrjcyCe6seYtFSd)  - playlist with accompanying text at [Text instruction](https://robottraders.io/courses/python-for-finance/chapter-2-loops-and-conditions)
+* [Python For Finance free YouTube Courses](https://www.youtube.com/playlist?list=PLdtqDMvm2lvTASUE94XrjcyCe6seYtFSd)  - playlist with accompanying text at [Text instruction](https://robottraders.io/courses/python-for-finance)
 
 ## YFinance Python YouTube Courses
 
