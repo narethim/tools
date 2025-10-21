@@ -6,4 +6,4 @@
 
 ## YFinance Python YouTube Courses
 
-* [Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data](https://www.youtube.com/watch?v=IYuNq2kN3Hs) - Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data
+* [Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data](https://www.youtube.com/watch?v=IYuNq2kN3Hs) - Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data - SuMyPyLab

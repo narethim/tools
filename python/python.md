@@ -15,7 +15,7 @@
 
 * [Python NumPy Tutorial for Beginners](https://www.youtube.com/watch?v=QUT1VHiLmmI) - freeCodeCamp.org - Source Code in github at [https://github.com/KeithGalli/NumPy](https://github.com/KeithGalli/NumPy)
 
-### Python `pyplotlib` library
+### Python `matplotlib` library
 
 * [Matplotlib Crash Course](https://www.youtube.com/watch?v=3Xc3CA655Y4) - freeCodeCamp.org - Source Code in github at [https://github.com/KeithGalli/matplotlib_tutorial/](https://github.com/KeithGalli/matplotlib_tutorial/)
 

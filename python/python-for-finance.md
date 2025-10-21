@@ -7,11 +7,19 @@
 
 ## Python For Finance free YouTube Courses
 
-* [Python For Finance free YouTube Courses](https://www.youtube.com/playlist?list=PLdtqDMvm2lvTASUE94XrjcyCe6seYtFSd)  - playlist with accompanying text at [Text instruction](https://robottraders.io/courses/python-for-finance)
+* [Python For Finance free YouTube Courses](https://www.youtube.com/playlist?list=PLdtqDMvm2lvTASUE94XrjcyCe6seYtFSd)  - playlist with accompanying text at [Text instruction](https://robottraders.io/courses/python-for-finance) - Robot Traders
+
+```sh
+e:\Test\python_work\robotraders
+```
 
 ## YFinance Python YouTube Courses
 
-* [Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data](https://www.youtube.com/watch?v=IYuNq2kN3Hs) - Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data
+* [Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data](https://www.youtube.com/watch?v=IYuNq2kN3Hs) - Yfinance Python Complete Tutorial | python yfinance | Fundamental and Technical Data - SuMyPyLab
+
+```sh
+e:\Test\python_work\sumytest
+```
 
 ## Yahoo Finance Python using Google Colab YouTube Courses
 
